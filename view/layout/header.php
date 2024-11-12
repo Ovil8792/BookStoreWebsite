@@ -56,8 +56,9 @@
         </div>
         <div class="container px-0">
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                <a href="index.html" class="navbar-brand">
-                    <h1 class="text-primary display-6">Fruitables</h1>
+                <a href="index.php" class="navbar-brand">
+                    <!-- <h1 class="text-primary display-6">Fruitables</h1> -->
+                     <img width="20%" src="https://i.pinimg.com/564x/95/f8/58/95f8588d6469a16271ea2d2fad419d00.jpg" alt="logo">
                 </a>
                 <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
