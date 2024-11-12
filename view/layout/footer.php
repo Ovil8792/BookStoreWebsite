@@ -63,7 +63,7 @@
                             <p>Email: Example@gmail.com</p>
                             <p>Phone: +0123 4567 8910</p>
                             <p>Payment Accepted</p>
-                            <img src="img/payment.png" class="img-fluid" alt="">
+                            <img src="../img/payment.png" class="img-fluid" alt="">
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
 <script src="./assets/lib/easing/easing.min.js"></script>
 <script src="./assets/lib/waypoints/waypoints.min.js"></script>
 <script src="./assets/lib/lightbox/js/lightbox.min.js"></script>
-<script src="./assets/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="http://webbansach/assets/lib/owlcarousel/owl.carousel.min.js"></script>
 
 <!-- Template Javascript -->
 <script src="./assets/js/main.js"></script>
