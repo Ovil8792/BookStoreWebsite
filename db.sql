@@ -1,5 +1,5 @@
 create database webbansach;
-use webbansach;
+use webbansach
 CREATE TABLE tai_khoan (
     id_user INT PRIMARY KEY,
     username_cli VARCHAR(50) NOT NULL,
