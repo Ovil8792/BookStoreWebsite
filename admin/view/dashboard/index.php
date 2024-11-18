@@ -1,5 +1,5 @@
 <?php
-include_once("./view/layouts/header.php");
+include_once "./view/layouts/header.php";
 ?>
 
 <div id="main">
@@ -26,8 +26,14 @@ include_once("./view/layouts/header.php");
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h6 class="text-muted font-semibold">Profile Views</h6>
-                                        <h6 class="font-extrabold mb-0">112.000</h6>
+                                        <?php
+                                        include_once "../admin/controller/dashboard/index.php";
+                                        $incoms = new Dashboard();
+                                        $ic = $incoms->income;
+                                        ?>
+                                        <h6 class="text-muted font-semibold">Doanh thu ngày</h6>
+                                        <h6 class="font-extrabold mb-0"><?=$ic ?></h6>
+
                                     </div>
                                 </div>
                             </div>
