@@ -1,6 +1,4 @@
-<?php
-include_once "./view/layouts/header.php";
-?>
+
 <div id="main">
     <header class="mb-3">
         <a href="#" class="burger-btn d-block d-xl-none">
@@ -12,9 +10,11 @@ include_once "./view/layouts/header.php";
         <div class="page-title">
             <div class="row">
                 <div class="col-12 col-md-6 order-md-1 order-last">
-                    <h3>DataTable</h3>
+                    <h3 id="datacheck">DataTable</h3>
                     <p class="text-subtitle text-muted">For user to check they list</p>
                 </div>
+
+                <!-- bfayhsgayu -->
                 <div class="col-12 col-md-6 order-md-2 order-first">
                     <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                         <ol class="breadcrumb">
@@ -30,7 +30,7 @@ include_once "./view/layouts/header.php";
                 <div class="card-header">
                     Danh sách danh mục
                 </div>
-                <a class="btn btn-primary" href="">Thêm danh mục</a>
+                <a class="btn btn-primary" href="?act=adddanhmuc">Thêm danh mục</a>
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
                         <thead>
@@ -41,26 +41,25 @@ include_once "./view/layouts/header.php";
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            include_once "../admin/controller/danhmuc/index.php";
-                                $flow = new Danhmuc();
-                                
-                            foreach ($flow->flowDanhmuc() as $key => $value) {
+                                <?php
+                                include_once "../admin/controller/DanhMuc.php";
+                                $dl = new DanhMucCTL();
+                                $listDanhMuc = $dl->listDaMu();
+                                foreach ($listDanhMuc as $value) {
                                 ?>
                                 <tr>
                                     <td><?= $value['id_danh_muc'] ?></td>
                                     <td><?= $value['ten_danh_muc'] ?></td>
                                     <td>
                                         <div class="d-flex">
-                                            <a class="btn btn-secondary" href="">Sửa</a>
-                                            <a class="btn btn-danger" href="">Xóa</a>
+                                            <a class="btn btn-secondary" href="index.php?act=suadanhmuc&id=<?=$value['id_danh_muc']?>">Sửa</a>
+                                            <a class="btn btn-danger" href="">Ẩn</a>
 
                                         </div>
                                     </td>
                                 </tr>
-                                <?php
-                            }
-                            ?>
+                                    <?php }?>
+
                         </tbody>
                     </table>
                 </div>
@@ -69,6 +68,3 @@ include_once "./view/layouts/header.php";
         </section>
     </div>
 
-    <?php
-    include_once "./view/layouts/footer.php";
-    ?>

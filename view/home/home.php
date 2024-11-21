@@ -1,32 +1,16 @@
-<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Search End -->
-
 
         <!-- Hero Start -->
         <div class="container-fluid py-5 mb-5 hero-header">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-md-12 col-lg-7">
-                        <h4 class="mb-3 text-secondary">100% Organic Foods</h4>
-                        <h1 class="mb-5 display-3 text-primary">Organic Veggies & Fruits Foods</h1>
+                        <h4 class="mb-3 text-secondary">Kho sách tổng hợp với rất nhiều thể loại</h4>
+                        <h1 class="mb-5 display-3 text-primary">Tìm mua sách chưa bao giờ lại dễ mà rẻ đến thế</h1>
                         <div class="position-relative mx-auto">
-                            <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search">
-                            <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%;">Submit Now</button>
+                            <input class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Từ khóa">
+                            <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg></button>
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-5">
@@ -67,8 +51,8 @@
                                 <i class="fas fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="featurs-content text-center">
-                                <h5>Free Shipping</h5>
-                                <p class="mb-0">Free on order over $300</p>
+                                <h5>Giao hàng siêu nhanh</h5>
+                                <p class="mb-0">Hỗ trợ giao hàng toàn quốc 24/7</p>
                             </div>
                         </div>
                     </div>
@@ -78,8 +62,8 @@
                                 <i class="fas fa-user-shield fa-3x text-white"></i>
                             </div>
                             <div class="featurs-content text-center">
-                                <h5>Security Payment</h5>
-                                <p class="mb-0">100% security payment</p>
+                                <h5>Thanh toán bảo mật</h5>
+                                <p class="mb-0">Hỗ trợ nhiều ngân hàng như Momo, Agribank, TPBank,...</p>
                             </div>
                         </div>
                     </div>
@@ -89,8 +73,8 @@
                                 <i class="fas fa-exchange-alt fa-3x text-white"></i>
                             </div>
                             <div class="featurs-content text-center">
-                                <h5>30 Day Return</h5>
-                                <p class="mb-0">30 day money guarantee</p>
+                                <h5>Hoàn trả uy tín</h5>
+                                <p class="mb-0">Tối đa 7 ngày đổi trả, hoàn 100% tiền</p>
                             </div>
                         </div>
                     </div>
@@ -100,8 +84,8 @@
                                 <i class="fa fa-phone-alt fa-3x text-white"></i>
                             </div>
                             <div class="featurs-content text-center">
-                                <h5>24/7 Support</h5>
-                                <p class="mb-0">Support every time fast</p>
+                                <h5>Hỗ trợ 24/7</h5>
+                                <p class="mb-0">Luôn sẵn lòng giải đáp thắc mắc của bạn</p>
                             </div>
                         </div>
                     </div>
@@ -117,39 +101,63 @@
                 <div class="tab-class text-center">
                     <div class="row g-4">
                         <div class="col-lg-4 text-start">
-                            <h1>Our Organic Products</h1>
+                            <h1>Các Sách Gần Đây</h1>
                         </div>
                         <div class="col-lg-8 text-end">
                             <ul class="nav nav-pills d-inline-flex text-center mb-5">
                                 <li class="nav-item">
-                                    <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
-                                        <span class="text-dark" style="width: 130px;">All Products</span>
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="">
+                                        <span class="text-dark" style="width: 130px;">Tất cả</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
-                                        <span class="text-dark" style="width: 130px;">Vegetables</span>
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="">
+                                        <span class="text-dark" style="width: 130px;">Manga</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
-                                        <span class="text-dark" style="width: 130px;">Fruits</span>
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="">
+                                        <span class="text-dark" style="width: 130px;">Tiểu thuyết</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
-                                        <span class="text-dark" style="width: 130px;">Bread</span>
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="">
+                                        <span class="text-dark" style="width: 130px;">Giáo dục</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
-                                        <span class="text-dark" style="width: 130px;">Meat</span>
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="">
+                                        <span class="text-dark" style="width: 130px;">Truyện ngắn</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
+
+                    <?php
+                    include_once "../BookStoreWebsite/controller/danhmuc/DanhMuc.php";
+                    $dstab = new DaMu();
+                    foreach ($dstab->getlistDM() as $key=>$dstabs){
+                    ?>
                     <div class="tab-content">
+                        <!-- test dữ liệu của bảng -->
+                        <!-- <table>
+                            <thead>
+                                <tr>
+                                     <th>STT</th>
+                                     <th>Tên Danh Mục</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><?=$dstabs['id_danh_muc'] ?></td>
+                                <td><?=$dstabs['ten_danh_muc'] ?></td>
+                            </tr>
+                            </tbody>
+                        </table> -->
+                    </div>
+                    <?php }?>
+                    <!-- <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
                                 <div class="col-lg-12">
@@ -462,14 +470,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+
                 </div>      
             </div>
         </div>
         <!-- Fruits Shop End-->
 
 
-        <!-- Featurs Start -->
+        <!-- có thể có hoặc k có phần này
+         nếu muốn sửa thì sửa theo 
         <div class="container-fluid service py-5">
             <div class="container py-5">
                 <div class="row g-4 justify-content-center">
@@ -515,7 +525,7 @@
                 </div>
             </div>
         </div>
-        <!-- Featurs End -->
+         Featurs End -->
 
 
         <!-- Vesitable Shop Start-->
