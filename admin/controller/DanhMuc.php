@@ -34,7 +34,10 @@ class DanhMucCTL{
             echo "<div class='alert alert-success' role='alert'>Sửa thành công, bấm <a href='index.php?act=danhmuc'>vào đây</a> để về trang danh sách</div>";
             
         }
-       // include_once "../BookStoreWebsite/admin/view/danhmuc/edit.php";
+      
+    }
+    public function fileTransfer(){
+        
     }
     
 }
