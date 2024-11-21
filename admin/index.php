@@ -1,11 +1,11 @@
 <?php
-session_start();
-if(!isset($_SESSION['admin'])){
-    header('Location: login.php');
-    exit();  
-}else{
+// session_start();
+// if(!isset($_SESSION['admin'])){
+//     header('Location: login.php');
+//     exit();  
+// }else{
     
-}
+// }
 
 
 include_once "./view/layouts/header.php";
@@ -13,10 +13,13 @@ include_once "./view/layouts/header.php";
 include_once "controller/DanhMuc.php";
 include_once "./model/pdo.php";
 include_once "./controller/DanhMuc.php";
-include_once "./controller/DashBoard.php";  
+include_once "./controller/DashBoard.php";
+include_once "./controller/SanPham.php";
+
 include_once "./model/danhmuc.php";
 
 $DMC = new DanhMucCTL();
+$SP = new SPCTL();
 
 if (isset($_GET['act']) && $_GET['act'] != '') {
     $action = $_GET['act'];
@@ -39,6 +42,30 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
             break;
         case "suadm":
             $DMC->SuaDM();
+            break;
+        case "sanpham":
+            include_once "./view/sanpham/index.php";
+            break;
+        case "addsanpham":
+            include_once "./view/sanpham/add.php";
+            break;
+        case "delsp":
+            $SP->delSP();
+            break;
+        case "addsp":
+            $SP->addSP();
+            break;
+        case "editsp":
+            include_once "./view/sanpham/edit.php";
+            break;
+        case "suaSP":
+            $SP->editSP();
+            break;
+        case "uploadPage":
+            include_once "./view/upload.php";
+            break;
+        case "upload":
+
             break;
     }
 } else {
