@@ -18,6 +18,28 @@
     <script src="./asset/js/pages/dashboard.js"></script>
 
     <script src="./asset/js/main.js"></script>
+    <script src="./asset/vendors/simple-datatables/simple-datatables.js"></script>
+    <script>
+        // Simple Datatable
+        let table1 = document.querySelector('#table1');
+        let dataTable = new simpleDatatables.DataTable(table1);
+
+        let sideDASH =document.getElementById('sad')
+        let sideDAN =document.getElementById('san')
+        let datacheck = document.getElementById('datacheck')
+        
+        if(datacheck){
+            console.log(datacheck);
+        if(datacheck.innerText == 'Following'){
+            sideDASH.classList.add('active')
+            sideDAN.classList.remove('active')
+        }
+        if(datacheck.innerText == 'DataTable'){
+            sideDAN.classList.add('active')
+            sideDASH.classList.remove('active')
+        }
+    }
+    </script>
 </body>
 
 </html>

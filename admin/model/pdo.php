@@ -1,4 +1,4 @@
-<?php
+<?php //
 /* function kết nối database */
 function pdo_get_connection()
 {
@@ -70,6 +70,22 @@ function pdo_query($sql)
         unset($conn);
     }
 }
+
+function pdo_query_assoc($sql)
+{
+    $sql_args = array_slice(func_get_args(), 1);
+    try {
+        $conn = pdo_get_connection();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($sql_args);
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $rows;
+    } catch (PDOException $e) {
+        throw $e;
+    } finally {
+        unset($conn);
+    }
+}
 /**
  * Thực thi câu lệnh sql truy vấn một bản ghi
  * @param string $sql câu lệnh sql
@@ -98,7 +114,7 @@ function pdo_query_one($sql)
  * Thực thi câu lệnh sql truy vấn một giá trị
  * @param string $sql câu lệnh sql
  * @param array $args mảng giá trị cung cấp cho các tham số của $sql
- * @return 
+ * @return giá trị
  * @throws PDOException lỗi thực thi câu lệnh
  */
 function pdo_query_value($sql)

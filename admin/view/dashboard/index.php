@@ -1,5 +1,5 @@
 <?php
-include_once("./view/layouts/header.php");
+//include_once "./view/layouts/header.php";
 ?>
 
 <div id="main">
@@ -26,8 +26,12 @@ include_once("./view/layouts/header.php");
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h6 class="text-muted font-semibold">Profile Views</h6>
-                                        <h6 class="font-extrabold mb-0">112.000</h6>
+                                        <?php
+
+                                        ?>
+                                        <h6 class="text-muted font-semibold">Doanh thu ngày</h6>
+                                        <h6 class="font-extrabold mb-0">14514</h6>
+
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +64,7 @@ include_once("./view/layouts/header.php");
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h6 class="text-muted font-semibold">Following</h6>
+                                        <h6 class="text-muted font-semibold" id="datacheck">Following</h6>
                                         <h6 class="font-extrabold mb-0">80.000</h6>
                                     </div>
                                 </div>
@@ -276,5 +280,5 @@ include_once("./view/layouts/header.php");
         </section>
     </div>
     <?php
-    include_once("./view/layouts/footer.php");
+//    include_once("./view/layouts/footer.php");
     ?>
