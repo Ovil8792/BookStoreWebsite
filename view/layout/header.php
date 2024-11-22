@@ -1,3 +1,4 @@
+<html>
 <head>
     <meta charset="utf-8">
     <title>Sách VN-tổng hợp các loại sách từ tây đến ta</title>
@@ -28,7 +29,7 @@
     <link href="./assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body >
 
     <!-- Spinner Start -->
     <!-- <div id="spinner"
@@ -72,23 +73,23 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Các thể loại</a>
                             <?php
-                                //  include_once "../BookStoreWebsite/controller/danhmuc/DanhMuc.php";
-                                //  $dsd = new DaMu();
+                                 include_once "../BookStoreWebsite/controller/danhmuc/DanhMuc.php";
+                                 $dsd = new DaMu();
+                                 $edata = $dsd->getlistDM();
                                  
-                                //     foreach($dsd->getlistDM()  as $key => $value){
+                                
                                  ?>
                             <div class="dropdown-menu m-0 bg-secondary rounded-0">
                                 <!-- thêm đường dẫn trang cart ở đây -->
-                                 
-                                <a href="#" class="dropdown-item"></a>
-                                <a href="#" class="dropdown-item"></a>
-                                <a href="#" class="dropdown-item"></a>
-                                <a href="#" class="dropdown-item"></a>
-                                
-                            </div>
-                            <?php
-                                  // }
+                                 <?php
+                                 foreach($edata  as $key => $value){
+                                 ?>
+                                <a href="#" style="" class="dropdown-item"><?=$value['ten_danh_muc']?></a>
+                                <?php
+                                   }
                                 ?>
+                            </div>
+                            
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Hỗ trợ</a>
                     </div>

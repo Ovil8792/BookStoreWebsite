@@ -10,7 +10,7 @@ class DanhMucCTL{
             $dbdm = new danhmuc();
             $ten = $_POST['name'];
             $dbdm->addDanhMuc($ten);
-            echo "<div class='alert alert-success' role='alert'>Thêm thành công, bấm <a href='index.php?act=danhmuc'>vào đây</a> để về trang danh sách</div>";
+            echo "<div style='margin-top:200px' class='alert alert-success d-flex justify-content-center' role='alert'>Thêm thành công, bấm <a href='index.php?act=danhmuc'>vào đây</a> để về trang danh sách</div>";
             
         }
         
@@ -31,7 +31,7 @@ class DanhMucCTL{
         if(isset($_POST['edit'])){
             $ten = $_POST['name'];
             $dbdm->SuaDanhMuc($id, $ten);
-            echo "<div class='alert alert-success' role='alert'>Sửa thành công, bấm <a href='index.php?act=danhmuc'>vào đây</a> để về trang danh sách</div>";
+            echo "<div style='margin-top:200px' class='alert alert-success d-flex justify-content-center' role='alert'>Sửa thành công, bấm <a href='index.php?act=danhmuc'>vào đây</a> để về trang danh sách</div>";
             
         }
       
