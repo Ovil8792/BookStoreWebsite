@@ -1,10 +1,4 @@
 
-<div id="main">
-    <header class="mb-3">
-        <a href="#" class="burger-btn d-block d-xl-none">
-            <i class="bi bi-justify fs-3"></i>
-        </a>
-    </header>
 
     <div class="page-heading">
         <div class="page-title">
@@ -47,30 +41,34 @@
                             </tr>
                         </thead>
                         <tbody>
-                               <?php
-                                    include_once "../admin/controller/SanPham.php";
-                                    $data =new SPCTL();
-                                    $dtsp = $data->showSP();
-                                    $basepicdir= "../admin/uploads/";
-                                    foreach($dtsp as $value){
-                               
-                               ?>
+                            <?php
+                            include_once "../admin/controller/SanPham.php";
+                            $data = new SPCTL();
+                            $dtsp = $data->showSP();
+                            $basepicdir = "../admin/uploads/";
+                            foreach ($dtsp as $value) {
+
+                                ?>
                                 <tr>
-                                    <td><?=$value['id_sp']?></td>
-                                    <td><?=$value['ten_sp']?></td>
-                                    <td><img width="10%" src="<?=$basepicdir.$value['anh_sp']?>" alt="<?=$value['anh_sp']!=''?'anh_sp' :'default img'?>"></td>
-                                    <td><?=$value['gia']?></td>
-                                    <td><?=$value['id_danh_muc']?></td>
-                                    <td><?=$value['tac_gia']?></td>
-                                    <td><?=$value['ngay_xb']?></td>
-                                    <td><span class="<?=$value['tinh_trang']=="còn hàng"? "badge rounded-pill text-bg-success" :" badge rounded-pill text-bg-danger" ?>"><?=$value['tinh_trang']?></span></td>
+                                    <td><?= $value['id_sp'] ?></td>
+                                    <td><?= $value['ten_sp'] ?></td>
+                                    <td><img width="10%" src="<?= $basepicdir . $value['anh_sp'] ?>"
+                                            alt="<?= $value['anh_sp'] != '' ? 'anh_sp' : 'default img' ?>"></td>
+                                    <td><?= $value['gia'] ?></td>
+                                    <td><?= $value['id_danh_muc'] ?></td>
+                                    <td><?= $value['tac_gia'] ?></td>
+                                    <td><?= $value['ngay_xb'] ?></td>
+                                    <td><span
+                                            class="<?= $value['tinh_trang'] == "còn hàng" ? "badge rounded-pill text-bg-success" : " badge rounded-pill text-bg-danger" ?>"><?= $value['tinh_trang'] ?></span>
+                                    </td>
                                     <td class="d-flex">
-                                    <a href="index.php?act=&id=<?=$value['id_sp']?>" class="btn btn-primary">Sửa ảnh</a>
-                                        <a href="index.php?act=editsp&id=<?=$value['id_sp']?>" class="btn btn-primary">Sửa</a>
-                                        <a href="index.php?act=delsp&id=<?=$value['id_sp']?>" class="btn btn-danger">Xóa</a>
+                                        <a href="#" class="btn btn-primary">Sửa ảnh</a>
+                                        <a href="index.php?act=editsp&id=<?= $value['id_sp'] ?>"
+                                            class="btn btn-primary">Sửa</a>
+                                        <a href="index.php?act=delsp&id=<?= $value['id_sp'] ?>" class="btn btn-danger">Xóa</a>
                                     </td>
                                 </tr>
-                                   <?php }?>
+                            <?php } ?>
 
                         </tbody>
                     </table>
@@ -80,4 +78,3 @@
         </section>
     </div>
 </div>
-

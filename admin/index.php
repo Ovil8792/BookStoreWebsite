@@ -1,11 +1,11 @@
 <?php
-// session_start();
-// if(!isset($_SESSION['admin'])){
-//     header('Location: login.php');
-//     exit();  
-// }else{
+session_start();
+if(!isset($_SESSION['admin'])){
+    header('Location: dangnhap.php');
+    exit();  
+}else{
     
-// }
+
 
 
 include_once "./view/layouts/header.php";
@@ -67,8 +67,12 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
         case "upload":
             $SP->fileTransfer();
             break;
+        case "taikhoan":
+            include_once "./view/taikhoan/index.php";
+            break;
     }
 } else {
     include_once 'view/dashboard/index.php';
 }
 include_once "./view/layouts/footer.php";
+ }

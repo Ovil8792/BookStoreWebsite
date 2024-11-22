@@ -11,6 +11,7 @@
 <link href="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus/dist/css/tempus-dominus.min.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./asset/css/bootstrap.css">
     <link rel="stylesheet" href="./asset/vendors/simple-datatables/style.css">
@@ -21,6 +22,11 @@
     <link rel="stylesheet" href="./asset/css/app.css">
     <link rel="shortcut icon" href="./asset/images/favicon.svg" type="image/x-icon">
 </head>
+<style>
+    #logouser{
+        cursor: pointer;
+    }
+</style>
 
 <body>
     <div id="app">
@@ -59,9 +65,25 @@
                                 <span>Sản phẩm</span>
                             </a>
                         </li>
+                        <li id="sus" class="sidebar-item ">
+                            <a href="index.php?act=taikhoan" class='sidebar-link'>
+                                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                                <span>Tài khoản</span>
+                            </a>
+                        </li>
                         
                     </ul>
                 </div>
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
             </div>
         </div>
+        <div id="main">
+    <header class="mb-3" style="width:100%;display:flex">
+        <a style="width:10%" href="#" class="burger-btn d-block d-xl-none">
+            <i class="bi bi-justify fs-3"></i>
+        </a>
+        <div style="width:75%"></div>
+        <div style="width:15%">
+       <img width="40px" src="./asset/images/circle.png" alt="user" id="logouser">
+        </div>
+    </header>

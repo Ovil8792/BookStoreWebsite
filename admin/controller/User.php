@@ -1,11 +1,14 @@
 <?php
+include_once "../admin/model/user.php";
 class UserCTL{
-    public function login(){
-        include_once "../admin/model/pdo.php";
-       
+    /**
+     * Hàm thực thi trả về dữ liệu danh sách người dùng, 
+     * lấy dữ liệu từ model
+     * @return array
+     */
+    public function showUser(){
+        $us = new User();
+        $data = $us->listUsers();
+        return $data;
     }
 }
-?>
-<!-- <script>
-
-</script> -->
