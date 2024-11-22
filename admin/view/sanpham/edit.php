@@ -37,7 +37,8 @@ $data= $dl->ShowSuaSP();
                             <input type="text" class="form-control" id="name" name="name" value="<?=$data['ten_sp']?>" required>
                             <label for="price" class="form_label">Giá</label>
                             <input type="number" class="form-control" id="price" name="price" value="<?=$data['gia']?>" required>
-                            <!-- <label for="image" class="form-label">Ảnh</label> -->
+                            <label for="anhsp" class="form-label">Ảnh</label>
+                            <input type="text" class="form-control" name="anhsp" id="anhsp" value="<?=$data['anh_sp']?>">
                              <label for="iddm" class="form-label">Danh mục</label>
                              <select name="iddm" id="iddm" class="form-select">
                                 <?php

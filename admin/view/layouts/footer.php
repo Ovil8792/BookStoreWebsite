@@ -31,27 +31,36 @@
         let sideDASH =document.getElementById('sad')
         let sideDAN =document.getElementById('san')
         let sideDAP =document.getElementById('sap')
+        let sideUSR =document.getElementById('sus')
         let datacheck = document.getElementById('datacheck')
         
         if(datacheck){
             console.log(datacheck);
         if(datacheck.innerText == 'Following'){
             sideDAP.classList.remove('active')
+            sideUSR.classList.remove('active')
             sideDASH.classList.add('active')
             sideDAN.classList.remove('active')
         }
         if(datacheck.innerText == 'DataTable'){
             sideDAN.classList.add('active')
+            sideUSR.classList.remove('active')
             sideDASH.classList.remove('active')
             sideDAP.classList.remove('active')
         }
         if(datacheck.innerText == 'Sản phẩm'){
             sideDAP.classList.add('active')
+            sideUSR.classList.remove('active')
             sideDASH.classList.remove('active')
             sideDAN.classList.remove('active')
         }
+        if(datacheck.innerText == 'Danh sách User'){
+            sideUSR.classList.add('active')
+            sideDASH.classList.remove('active')
+            sideDAN.classList.remove('active')
+            sideDAP.classList.remove('active')
+        }
     }
-
     </script>
 </body>
 
