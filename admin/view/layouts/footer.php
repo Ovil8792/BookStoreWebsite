@@ -51,23 +51,7 @@
             sideDAN.classList.remove('active')
         }
     }
-    document.addEventListener('DOMContentLoaded', function () {
-        const picker = new tempusDominus.TempusDominus(document.getElementById('datetimePicker'), {
-            display: {
-                components: {
-                    calendar: true,
-                    date: true,
-                    month: true,
-                    year: true,
-                    decades: true,
-                    clock: true,
-                    hours: true,
-                    minutes: true,
-                    seconds: false,
-                }
-            }
-        });
-    });
+
     </script>
 </body>
 

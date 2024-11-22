@@ -65,7 +65,7 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
             include_once "./view/upload.php";
             break;
         case "upload":
-
+            $SP->fileTransfer();
             break;
     }
 } else {
