@@ -2,8 +2,8 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3 id="datacheck">DataTable</h3>
-                <p class="text-subtitle text-muted">For user to check they list</p>
+                <h3 id="datacheck">Quản lý bình luận</h3>
+                <p class="text-subtitle text-muted">Kiểm tra bình luận của người dùng</p>
             </div>
 
             <!-- bfayhsgayu -->
@@ -11,7 +11,7 @@
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">DataTable</li>
+                        <li class="breadcrumb-item active" aria-current="page">Bình Luận</li>
                     </ol>
                 </nav>
             </div>
@@ -20,16 +20,20 @@
     <section class="section">
         <div class="card">
             <div class="card-header">
-                Danh sách danh mục
+                Danh sách bình luận
             </div>
-            <a class="btn btn-primary" href="?act=adddanhmuc">Thêm danh mục</a>
+            <!-- <a class="btn btn-primary" href="?act=adddanhmuc">Thêm danh mục</a> -->
             <div class="card-body">
                 <table class="table table-striped" id="table1">
                     <thead>
                         <tr>
                             <th class="col-2">ID</th>
-                            <th>Bình Luận</th>
-                            <th class="col-2">Action</th>
+                            <th>ID sản phẩm</th>
+                            <th>ID tài khoản</th>
+                            <th>Nội dung</th>
+                            <th>Đánh giá</th>
+                            <th>Ngày tạo</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -32,6 +32,7 @@
         let sideDAN =document.getElementById('san')
         let sideDAP =document.getElementById('sap')
         let sideUSR =document.getElementById('sus')
+        let sideBL =document.getElementById('sbl')
         let datacheck = document.getElementById('datacheck')
         
         if(datacheck){
@@ -39,6 +40,7 @@
         if(datacheck.innerText == 'Following'){
             sideDAP.classList.remove('active')
             sideUSR.classList.remove('active')
+            sideBL.classList.remove('active')
             sideDASH.classList.add('active')
             sideDAN.classList.remove('active')
         }
@@ -46,12 +48,14 @@
             sideDAN.classList.add('active')
             sideUSR.classList.remove('active')
             sideDASH.classList.remove('active')
+            sideBL.classList.remove('active')
             sideDAP.classList.remove('active')
         }
         if(datacheck.innerText == 'Sản phẩm'){
             sideDAP.classList.add('active')
             sideUSR.classList.remove('active')
             sideDASH.classList.remove('active')
+            sideBL.classList.remove('active')
             sideDAN.classList.remove('active')
         }
         if(datacheck.innerText == 'Danh sách User'){
@@ -59,6 +63,14 @@
             sideDASH.classList.remove('active')
             sideDAN.classList.remove('active')
             sideDAP.classList.remove('active')
+            sideBL.classList.remove('active')
+        }
+        if(datacheck.innerText== "Quản lý bình luận"){
+            sideBL.classList.add("active")
+            sideDASH.classList.remove('active')
+            sideDAN.classList.remove('active')
+            sideDAP.classList.remove('active')
+            sideUSR.classList.remove('active')
         }
     }
     </script>
