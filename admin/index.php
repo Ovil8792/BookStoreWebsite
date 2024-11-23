@@ -67,9 +67,6 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
         case "upload":
             $SP->fileTransfer();
             break;
-        case "binhluan":
-            
-            break;
         case "hoadon":
 
             break;
