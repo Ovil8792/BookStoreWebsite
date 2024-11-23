@@ -41,6 +41,7 @@
             sideBL.classList.remove('active')
             sideDAP.classList.remove('active')
             sideUSR.classList.remove('active')
+            sideBL.classList.remove('active')
             sideDASH.classList.add('active')
             sideDAN.classList.remove('active')
         }
@@ -49,6 +50,7 @@
             sideBL.classList.remove('active')
             sideUSR.classList.remove('active')
             sideDASH.classList.remove('active')
+            sideBL.classList.remove('active')
             sideDAP.classList.remove('active')
         }
         if(datacheck.innerText == 'Sản phẩm'){
@@ -56,6 +58,7 @@
             sideBL.classList.remove('active')
             sideUSR.classList.remove('active')
             sideDASH.classList.remove('active')
+            sideBL.classList.remove('active')
             sideDAN.classList.remove('active')
         }
         if(datacheck.innerText == 'Danh sách User'){
@@ -71,6 +74,14 @@
             sideDASH.classList.remove('active')
             sideDAN.classList.remove('active')
             sideDAP.classList.remove('active')
+            sideBL.classList.remove('active')
+        }
+        if(datacheck.innerText== "Quản lý bình luận"){
+            sideBL.classList.add("active")
+            sideDASH.classList.remove('active')
+            sideDAN.classList.remove('active')
+            sideDAP.classList.remove('active')
+            sideUSR.classList.remove('active')
         }
     }
     </script>
