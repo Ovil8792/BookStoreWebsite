@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 21, 2024 lúc 04:32 PM
+-- Thời gian đã tạo: Th10 23, 2024 lúc 02:10 AM
 -- Phiên bản máy phục vụ: 8.3.0
 -- Phiên bản PHP: 8.2.18
 
@@ -69,18 +69,19 @@ CREATE TABLE IF NOT EXISTS `danh_muc` (
   `id_danh_muc` int NOT NULL AUTO_INCREMENT,
   `ten_danh_muc` varchar(100) NOT NULL,
   PRIMARY KEY (`id_danh_muc`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `danh_muc`
 --
 
 INSERT INTO `danh_muc` (`id_danh_muc`, `ten_danh_muc`) VALUES
-(1, 'manga'),
-(2, 'tiểu thuyết'),
-(3, 'giáo dục'),
-(4, 'truyện ngắn'),
-(10, 'trinh thám');
+(1, 'Manga'),
+(2, 'Tiểu thuyết'),
+(3, 'Giáo dục'),
+(4, 'Truyện ngắn'),
+(11, 'Truyện hài'),
+(10, 'Trinh thám');
 
 -- --------------------------------------------------------
 
@@ -142,7 +143,7 @@ DROP TABLE IF EXISTS `san_pham`;
 CREATE TABLE IF NOT EXISTS `san_pham` (
   `id_sp` int NOT NULL AUTO_INCREMENT,
   `ten_sp` varchar(100) NOT NULL,
-  `gia` decimal(10,2) DEFAULT NULL,
+  `gia` int DEFAULT NULL,
   `anh_sp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `id_danh_muc` int DEFAULT NULL,
   `tac_gia` varchar(100) DEFAULT NULL,
@@ -150,15 +151,15 @@ CREATE TABLE IF NOT EXISTS `san_pham` (
   `tinh_trang` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_sp`),
   KEY `id_danh_muc` (`id_danh_muc`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `san_pham`
 --
 
 INSERT INTO `san_pham` (`id_sp`, `ten_sp`, `gia`, `anh_sp`, `id_danh_muc`, `tac_gia`, `ngay_xb`, `tinh_trang`) VALUES
-(1, 'conan', 20000.00, '', 1, 'Gosho Aoyama', '2014-07-23', 'còn hàng'),
-(5, 'Đắc Nhân Tâm', 300000.00, '', 3, 'Dale Carnegie', '1936-12-10', 'hết hàng');
+(1, 'conan', 20200, 'conantruyen_RRQU.jpg', 1, 'Gosho Aoyama', '2014-11-23', 'còn hàng'),
+(5, 'Đắc Nhân Tâm', 300000, 'dacnhantam86.jpg', 3, 'Dale Carnegie', '1936-12-10', 'hết hàng');
 
 -- --------------------------------------------------------
 
@@ -185,8 +186,8 @@ CREATE TABLE IF NOT EXISTS `tai_khoan` (
 --
 
 INSERT INTO `tai_khoan` (`id_user`, `username_cli`, `password_cli`, `email_cli`, `ho_ten`, `avatar`, `dia_chi`, `sdt`, `role`) VALUES
-(1, 'Duytao123', 'Duytaolao19@', 'tamuon00@gmail.com', 'Tran Duy', NULL, NULL, '0865091023', 'admin'),
-(2, 'abc', 'abc123', 'abc@mail.mail', 'fsaaw', 'https://i.pinimg.com/236x/0f/3f/eb/0f3feb96466565cc39d182dc3808085d.jpg', 'faw awdfsa awe aw2 awda adfwa', '0259844315453', 'user');
+(1, 'Duytao123', 'Duytaolao19@', 'tamuon00@gmail.com', 'Tran Duy', '', NULL, '0865091023', 'admin'),
+(2, 'abc', 'abc123', 'abc@mail.mail', 'fsaaw', '', 'faw awdfsa awe aw2 awda adfwa', '0259844315453', 'user');
 
 -- --------------------------------------------------------
 
