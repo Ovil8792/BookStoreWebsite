@@ -4,7 +4,7 @@ class UserCTL{
     /**
      * Hàm thực thi trả về dữ liệu danh sách người dùng, 
      * lấy dữ liệu từ model
-     * @return array
+     * @return array mảng chứa danh sách người dùng
      */
     public function showUser(){
         $us = new User();
