@@ -65,19 +65,6 @@
                             <i class="bi bi-journal-bookmark-fill"></i>
                                 <span>Sản phẩm</span>
                             </a>
-                        </li>
-                        <li id="sap" class="sidebar-item ">
-                            <a href="index.php?act=sanpham" class='sidebar-link'>
-                            <i class="bi bi-chat-left-dots-fill"></i>
-                                <span>Bình luận</span>
-                            </a>
-                        </li>
-                        <li id="sap" class="sidebar-item ">
-                            <a href="index.php?act=sanpham" class='sidebar-link'>
-                            <i class="bi bi-receipt"></i>
-                                <span>Hóa đơn</span>
-                            </a>
-                        </li>
                         <li id="sus" class="sidebar-item ">
                             <a href="index.php?act=taikhoan" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-spreadsheet-fill"></i>
