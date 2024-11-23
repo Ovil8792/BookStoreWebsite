@@ -38,6 +38,7 @@
         if(datacheck){
             console.log(datacheck);
         if(datacheck.innerText == 'Following'){
+            sideBL.classList.remove('active')
             sideDAP.classList.remove('active')
             sideUSR.classList.remove('active')
             sideBL.classList.remove('active')
@@ -46,6 +47,7 @@
         }
         if(datacheck.innerText == 'DataTable'){
             sideDAN.classList.add('active')
+            sideBL.classList.remove('active')
             sideUSR.classList.remove('active')
             sideDASH.classList.remove('active')
             sideBL.classList.remove('active')
@@ -53,6 +55,7 @@
         }
         if(datacheck.innerText == 'Sản phẩm'){
             sideDAP.classList.add('active')
+            sideBL.classList.remove('active')
             sideUSR.classList.remove('active')
             sideDASH.classList.remove('active')
             sideBL.classList.remove('active')
@@ -60,6 +63,14 @@
         }
         if(datacheck.innerText == 'Danh sách User'){
             sideUSR.classList.add('active')
+            sideBL.classList.remove('active')
+            sideDASH.classList.remove('active')
+            sideDAN.classList.remove('active')
+            sideDAP.classList.remove('active')
+        }
+        if(datacheck.innerText == 'Bình luận'){
+            sideBL.classList.add('active')
+            sideUSR.classList.remove('active')
             sideDASH.classList.remove('active')
             sideDAN.classList.remove('active')
             sideDAP.classList.remove('active')
