@@ -65,6 +65,12 @@
                                 <span>Sản phẩm</span>
                             </a>
                         </li>
+                        <li id="sap" class="sidebar-item ">
+                            <a href="index.php?act=binhluan" class='sidebar-link'>
+                                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                                <span>Bình Luận</span>
+                            </a>
+                        </li>
                         <li id="sus" class="sidebar-item ">
                             <a href="index.php?act=taikhoan" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-spreadsheet-fill"></i>

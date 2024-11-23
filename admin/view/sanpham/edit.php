@@ -61,7 +61,7 @@ $data= $dl->ShowSuaSP();
 
                         <button type="submit" id="edit" name="edit" class="btn btn-primary">Sửa</button>
                     
-    </form>
+                </form>
                 </div>
             </div>
         </section>
