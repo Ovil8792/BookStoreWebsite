@@ -76,6 +76,9 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
         case "taikhoan":
             include_once "./view/taikhoan/index.php";
             break;
+        case "binhluan":
+            include_once "./view/binhluan/index.php";
+            break;
     }
 } else {
     include_once 'view/dashboard/index.php';
