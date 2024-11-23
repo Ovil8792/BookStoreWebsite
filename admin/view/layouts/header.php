@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./asset/css/bootstrap.css">
+
     <link rel="stylesheet" href="./asset/vendors/simple-datatables/style.css">
     <link rel="stylesheet" href="./asset/vendors/iconly/bold.css">
 
@@ -61,8 +62,20 @@
                         </li>
                         <li id="sap" class="sidebar-item ">
                             <a href="index.php?act=sanpham" class='sidebar-link'>
-                                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                            <i class="bi bi-journal-bookmark-fill"></i>
                                 <span>Sản phẩm</span>
+                            </a>
+                        </li>
+                        <li id="sap" class="sidebar-item ">
+                            <a href="index.php?act=sanpham" class='sidebar-link'>
+                            <i class="bi bi-chat-left-dots-fill"></i>
+                                <span>Bình luận</span>
+                            </a>
+                        </li>
+                        <li id="sap" class="sidebar-item ">
+                            <a href="index.php?act=sanpham" class='sidebar-link'>
+                            <i class="bi bi-receipt"></i>
+                                <span>Hóa đơn</span>
                             </a>
                         </li>
                         <li id="sus" class="sidebar-item ">
