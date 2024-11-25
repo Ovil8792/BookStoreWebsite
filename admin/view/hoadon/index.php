@@ -10,7 +10,7 @@
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Bình Luận</a></li>
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                         <li class="breadcrumb-item active" aria-current="page">DataTable</li>
                     </ol>
                 </nav>
@@ -22,34 +22,41 @@
             <div class="card-header">
                 Danh sách danh mục
             </div>
-            <a class="btn btn-primary" href="?act=adddanhmuc">Thêm danh mục</a>
             <div class="card-body">
                 <table class="table table-striped" id="table1">
                     <thead>
                         <tr>
-                            <th class="col-2">ID</th>
-                            <th>Bình Luận</th>
-                            <th class="col-2">Action</th>
+                            <th >ID</th>
+                            <th>ID Người dùng</th>
+                            <th >Phương thức thanh toán</th>
+                            <th >Tình Trạng</th>
+                            <th >Tổng</th>
+                            <th >Họ Tên</th>
+                            <th >Địa Chỉ</th>
+                            <th >SĐT</th>
+                            <th >Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        include_once "../admin/controller/Binhluan.php";
-                        $bl = new BinhLuanCTL();
-                        $listbl = $bl->HienBL();
-                        foreach ($listbl as $value) {
+                        include_once "../admin/controller/Hoadon.php";
+                        $hd = new HoaDonCTL();
+                        $listhd = $hd->HienHD();
+                        foreach ($listhd as $value) {
                         ?>
                             <tr>
-                                <td><?= $value['id'] ?></td>
-                                <td><?= $value['id_sanpham'] ?></td>
-                                <td><?= $value['id_taikhoan'] ?></td>
-                                <td><?= $value['noidung'] ?></td>
-                                <td><?= $value['danhgia'] ?></td>
-                                <td><?= $value['ngaytao'] ?></td>
+                                <td><?= $value['id_hoa_don']+1 ?></td>
+                                <td><?= $value['id_nguoidung'] ?></td>
+                                <td><?= $value['phuongthucthanhtoan'] ?></td>
+                                <td><?= $value['tinhtrang'] ?></td>
+                                <td><?= $value['tongtien'] ?></td>
+                                <td><?= $value['ho_ten'] ?></td>
+                                <td><?= $value['dia_chi'] ?></td>
+                                <td><?= $value['so_dt'] ?></td>
                                 <td>
                                     <div class="d-flex">
 
-                                        <a class="btn btn-danger" href="">Ẩn</a>
+                                        <a class="btn btn-primary" href="index.php?act=chitiethoadon&id_nguoidung=<?= $value['id_nguoidung'] ?>">Chi tiết</a>
 
                                     </div>
                                 </td>
