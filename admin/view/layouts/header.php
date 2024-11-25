@@ -78,6 +78,12 @@
                                 <span>Tài khoản</span>
                             </a>
                         </li>
+                        <li id="sus" class="sidebar-item ">
+                            <a href="index.php?act=hoadon" class='sidebar-link'>
+                                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                                <span>Hóa Đơn</span>
+                            </a>
+                        </li>
                         
                     </ul>
                 </div>

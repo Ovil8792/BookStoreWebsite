@@ -15,11 +15,14 @@ include_once "./model/pdo.php";
 include_once "./controller/DanhMuc.php";
 include_once "./controller/DashBoard.php";
 include_once "./controller/SanPham.php";
+include_once "./controller/Binhluan.php";
+include_once "./controller/Chitiethoadon.php";
 
 include_once "./model/danhmuc.php";
 
 $DMC = new DanhMucCTL();
 $SP = new SPCTL();
+$CTHD = new ChiTietHoaDonCTL();
 
 if (isset($_GET['act']) && $_GET['act'] != '') {
     $action = $_GET['act'];
@@ -75,6 +78,15 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
             break;
         case "binhluan":
             include_once "./view/binhluan/index.php";
+            break;
+        case "hoadon":
+            include_once "./view/hoadon/index.php";
+            break;
+        case "chitiethoadon":
+            include_once "./view/chitiethoadon/index.php";
+            break;
+        case "edithd":
+            $CTHD -> editCTHD();
             break;
     }
 } else {
