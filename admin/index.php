@@ -70,6 +70,9 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
         case "upload":
             $SP->fileTransfer();
             break;
+        case "hoadon":
+
+            break;
         case "taikhoan":
             include_once "./view/taikhoan/index.php";
             break;

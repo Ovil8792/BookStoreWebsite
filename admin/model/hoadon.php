@@ -1,4 +1,5 @@
 <?php
+
 include_once "pdo.php";
 
 class Hoadon{
@@ -15,4 +16,4 @@ class Hoadon{
         return pdo_query_one($sql);
     }
 }
-?>
+

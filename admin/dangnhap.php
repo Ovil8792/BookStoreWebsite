@@ -1,5 +1,5 @@
 <?php
-    $dburl = "mysql:host=localhost;dbname=bansech;charset=utf8";
+    $dburl = "mysql:host=localhost;dbname=webbansach;charset=utf8";
     $username = 'root';
     $password = '';
 try{
@@ -60,38 +60,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./asset/css/style.css">
     <title>Login(admin only)</title>
 </head>
-<style>
-.ct{
-    margin: 50px auto;
-    width: 500px;
-    padding: 20px;
-    background: rgba(2,110,10,0.3);
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
-#cen{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: black;
-    font-size: 20px;
-}
-#ka{
-    margin-top: 20px;
-    cursor: pointer;
-    color: white;
-    background: #4CAF50;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-</style>
 <body>
     <div class="row ct">
         <div class="col-12">
