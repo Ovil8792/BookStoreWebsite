@@ -20,9 +20,7 @@
                 </div>
                 <div class="card-body">
                     <?php
-                    include_once "../admin/controller/DanhMuc.php";
-                    $dm = new DanhMucCTL();
-                    $data = $dm->listDaMu();
+                    
                     ?>
                     <form action="index.php?act=addsp" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">

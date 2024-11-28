@@ -9,88 +9,80 @@ if(!isset($_SESSION['admin'])){
 
 
 include_once "./view/layouts/header.php";
+ include_once "./controller/DanhMuc.php";
+// include_once "./controller/DashBoard.php";
+ include_once "./controller/SanPham.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/admin/controller/Binhluan.php";
+include_once "./controller/User.php";
 
-include_once "controller/DanhMuc.php";
-include_once "./model/pdo.php";
-include_once "./controller/DanhMuc.php";
-include_once "./controller/DashBoard.php";
-include_once "./controller/SanPham.php";
-include_once "./controller/Binhluan.php";
-include_once "./controller/Chitiethoadon.php";
+include_once "./controller/Hoadon.php";
 
-include_once "./model/danhmuc.php";
 
-$DMC = new DanhMucCTL();
-$SP = new SPCTL();
-$CTHD = new ChiTietHoaDonCTL();
 
 if (isset($_GET['act']) && $_GET['act'] != '') {
     $action = $_GET['act'];
     switch($action) {
         case "danhmuc":
-            
-            include_once "./view/danhmuc/index.php";
-            break;
-        case "listdanhmuc":
-            $DMC->listDaMu();
+            listDaMu();
             break;
         case "adddanhmuc":
-            include_once "./view/danhmuc/add.php";
+            include_once $_SERVER['DOCUMENT_ROOT']."/admin/view/danhmuc/add.php";
             break;
         case 'adddm':
-            $DMC->AddDM();
+            AddDM();
             break;
         case "suadanhmuc":
-            include_once "./view/danhmuc/edit.php";
+            hienSuaDM();
             break;
         case "suadm":
-            $DMC->SuaDM();
+            SuaDM();
             break;
         case "sanpham":
-            include_once "./view/sanpham/index.php";
+            showSP();
             break;
         case "addsanpham":
-            include_once "./view/sanpham/add.php";
+            require_once $_SERVER['DOCUMENT_ROOT']."/admin/view/sanpham/add.php";
             break;
         case "delsp":
-            $SP->delSP();
+            delSP();
             break;
         case "addsp":
-            $SP->addSP();
+            addSP();
             break;
         case "editsp":
-            include_once "./view/sanpham/edit.php";
-            break;
+           ShowSuaSP();
+           break;
         case "suaSP":
-            $SP->editSP();
+            editSP();
             break;
-        case "uploadPage":
-            include_once "./view/upload.php";
-            break;
-        case "upload":
-            $SP->fileTransfer();
-            break;
+        // case "uploadPage":
+        //     include_once "./view/upload.php";
+        //     break;
+        // case "upload":
+        //     $SP->fileTransfer();
+        //     break;
         case "taikhoan":
-            include_once "./view/taikhoan/index.php";
+           showUser();
             break;
         case "binhluan":
-            include_once "./view/binhluan/index.php";
+           getBL();
             break;
         case "hoadon":
-            include_once "./view/hoadon/index.php";
+            HienHD();
             break;
-        case "chitiethoadon":
-            include_once "./view/chitiethoadon/index.php";
-            break;
+        // case "chitiethoadon":
+        //     include_once "./view/chitiethoadon/index.php";
+        //     break;
         case "show":
-           $DMC->hienDM();
+           hienDaMu();
             break;
         case "hide":
-            $DMC->anDM();
+            anDaMu();
             break;
     }
-} else {
+}
+ else {
     include_once 'view/dashboard/index.php';
 }
-include_once "./view/layouts/footer.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/admin/view/layouts/footer.php";
  }

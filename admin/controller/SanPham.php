@@ -1,28 +1,30 @@
 <?php
-include_once "../admin/model/sanpham.php";
-class SPCTL{
-    public function showSP(){
-        $sp = new SanPham();
-        $listSP = $sp->listSP();
-        return $listSP;
+include_once $_SERVER['DOCUMENT_ROOT']."/admin/model/sanpham.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/admin/model/danhmuc.php";
+
+    function showSP(){
+        
+        $listSP = listSP();
+        
+        require_once $_SERVER['DOCUMENT_ROOT']."/admin/view/sanpham/index.php";
     }
 
-    public function ShowSuaSP(){
+    function ShowSuaSP(){
         if(isset($_GET['id'])){
             $id = $_GET['id'];
-            $sp = new SanPham();
-            $sanpham = $sp->getById($id);
+            $dm = listDanhMuc();
+            $data = getById($id);
+            include_once $_SERVER['DOCUMENT_ROOT']."/admin/view/sanpham/edit.php";
         }
-        return $sanpham;
     }
     
-    public function editSP(){
+    function editSP(){
         if(!isset($_GET['id'])){
             echo "id not found";
             die;
         }
         $id= $_GET['id'];
-        $sp = new SanPham();
+        
         
         if(isset($_POST['edit'])){
             $name = $_POST['name'];
@@ -32,12 +34,12 @@ class SPCTL{
             $tgia = $_POST['tgia'];
             $ngayxb = $_POST['ngayxb'];
             $tinhtrang = $_POST['tinhtrang'];
-            $sp->SuaSP($id,$name,$price,$anhsp,$iddm,$tgia,$ngayxb,$tinhtrang);
+            SuaSP($id,$name,$price,$anhsp,$iddm,$tgia,$ngayxb,$tinhtrang);
             echo "<div style='margin-top:200px' class='alert alert-success d-flex justify-content-center' role='alert'>Sửa thành công, bấm <a style='color:blue;font-weight:bold;' href='index.php?act=sanpham'> vào đây </a> để về trang danh sách</div>";
         }
     }
 
-    public function fileTransfer(){
+    function fileTransfer(){
         $uploaddir='uploads/';
         $target_file= $uploaddir.basename($_FILES["anhsp"]["name"]);
         $uploadOk = 1;
@@ -84,33 +86,33 @@ class SPCTL{
         return $_FILES['anhsp']['name'];
     }
 
-    public function delSP(){
+    function delSP(){
         if(isset($_GET['id'])){
             $id = $_GET['id'];
-            $sp = new SanPham();
-            $sp->del($id);
+            
+            del($id);
             echo "<div style='margin-top:200px' class='alert alert-success d-flex justify-content-center' role='alert'>Xóa thành công, bấm <a href='index.php?act=sanpham'>vào đây</a> để về trang danh sách</div>";
         }
     }
 
 
-    public function addSP(){
+    function addSP(){
 
-        $sp = new SanPham();
+        
         if(isset($_POST['add'])){
             $name=$_POST['name'];
             $price=$_POST['price'];
-            $anhsp = $this->fileTransfer();
+            $anhsp = fileTransfer();
             
             
             $iddm =$_POST['iddm'];
             $tgia =$_POST['tgia'];
             $ngayxb =$_POST['ngayxb'];
             $tinhtrang=$_POST['tinhtrang'];
-            $sp->add($name,$price,$anhsp,$iddm,$tgia,$ngayxb,$tinhtrang);
+            add($name,$price,$anhsp,$iddm,$tgia,$ngayxb,$tinhtrang);
             echo "<div class='alert alert-success d-flex justify-content-center' role='alert'>Thêm thành công, bấm <a href='index.php?act=sanpham'>vào đây</a> để về trang danh sách</div>";
         }
     }
 
 
-}
+    $data = listDanhMuc();

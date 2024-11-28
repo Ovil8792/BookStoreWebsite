@@ -1,10 +1,4 @@
 <?php
-include_once "../BookStoreWebsite/model/DanhMuc.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/model/DanhMuc.php";
 
-class DaMu{
-
-public function getlistDM(){
-    $listDaMu = getDM();
-    return $listDaMu;
-}
-}
+$edata = getDM();

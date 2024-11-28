@@ -39,9 +39,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        include_once "../admin/controller/Hoadon.php";
-                        $hd = new HoaDonCTL();
-                        $listhd = $hd->HienHD();
+                        
                         foreach ($listhd as $value) {
                         ?>
                             <tr>
