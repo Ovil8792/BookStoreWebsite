@@ -1,35 +1,32 @@
 <?php
 include_once 'pdo.php';
-class danhmuc{
-    public $table = 'danh_muc';
 
-public function listDanhMuc()
+function listDanhMuc()
 {
-    $sql = "select * from $this->table";
+    $sql = "select * from danh_muc";
     return pdo_query($sql);
 }
-public function addDanhMuc($name)
+function addDanhMuc($name)
 {
-    $sql = "INSERT INTO $this->table (ten_danh_muc) VALUES ('$name')";
+    $sql = "INSERT INTO danh_muc (ten_danh_muc) VALUES ('$name')";
     return pdo_execute($sql);
 }
-public function ShowDMById($id)
+function ShowDMById($id)
 {
-    $sql = "SELECT * FROM $this->table WHERE id_danh_muc = '$id'";
+    $sql = "SELECT * FROM danh_muc WHERE id_danh_muc = '$id'";
     return pdo_query_one($sql);
 }
 
-public function SuaDanhMuc($id, $name)
+function SuaDanhMuc($id, $name)
 {
-    $sql = "UPDATE $this->table SET ten_danh_muc = '$name' WHERE id_danh_muc = '$id'";
+    $sql = "UPDATE danh_muc SET ten_danh_muc = '$name' WHERE id_danh_muc = '$id'";
     return pdo_execute($sql);
 }
-public function AnDM($id){
-    $sql= "UPDATE $this->table SET stat=0 WHERE id_danh_muc=$id";
+function AnDM($id){
+    $sql= "UPDATE danh_muc SET stat=0 WHERE id_danh_muc=$id";
     return pdo_execute($sql);
 }
-public function HienDM($id){
-    $sql= "UPDATE $this->table SET stat=1 WHERE id_danh_muc=$id";
+function HienDM($id){
+    $sql= "UPDATE danh_muc SET stat=1 WHERE id_danh_muc=$id";
     return pdo_execute($sql);
-}
 }

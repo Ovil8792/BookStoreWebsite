@@ -42,11 +42,8 @@
                         </thead>
                         <tbody>
                             <?php
-                            include_once "../admin/controller/SanPham.php";
-                            $data = new SPCTL();
-                            $dtsp = $data->showSP();
                             $basepicdir = "../admin/uploads/";
-                            foreach ($dtsp as $value) {
+                            foreach ($listSP as $value) {
 
                                 ?>
                                 <tr>

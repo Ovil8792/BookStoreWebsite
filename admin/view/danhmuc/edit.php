@@ -21,9 +21,7 @@
                 </div>
                 <div class="card-body">
 <?php
- include_once "../admin/controller/DanhMuc.php";
- $dl = new DanhMucCTL();
-$data = $dl->hienSuaDM();
+
 
 ?>
                     <form action="index.php?act=suadm&id=<?=$data['id_danh_muc']?>" method="POST">

@@ -25,7 +25,7 @@
                 <div class="card-header">
                     Danh sách tài khoản
                 </div>
-                <a class="btn btn-primary" href="?act=adddanhmuc">Thêm tài khoản</a>
+                <!-- <a class="btn btn-primary" href="?act=adddanhmuc">Thêm tài khoản</a> -->
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
                         <thead>
@@ -37,15 +37,14 @@
                                 <th>Avatar</th>
                                 <th>Địa chỉ</th>
                                 <th>SĐT</th>
+                                <th>Role</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                                 <?php
-                                include_once "../admin/controller/User.php";
-                                $us = new UserCTL();
-                                $a = $us->showUser();
-                                foreach ($a as $v) {
+                               
+                                foreach ($data as $v) {
                                 ?>
                                 <tr>
                                     <td><?= $v['id_user'] ?></td>
@@ -55,9 +54,15 @@
                                     <td><?= $v['avatar']?></td>
                                     <td><?= $v['dia_chi']?></td>
                                     <td><?= $v['sdt']?></td>
-                                    <?php 
-                                        if($v['role'] === 'user') {
-                                    ?>
+                                    <td><?= $v['role']?></td>
+                                    <?php if($v['role'] === 'admin'){ ?>
+                                        <td>
+                                            <div class="d-flex">
+                                                t là chủ web t thích làm j kệ t
+                                            </div>
+                                        </td>
+                                        
+                                        <?php }else{ ?>
                                     <td>
                                         <div class="d-flex">
                                             <a style="color:black" class="btn btn-warning" href="#">Cảnh cáo</a>
@@ -65,16 +70,11 @@
 
                                         </div>
                                     </td>
-                                    <?php }elseif($v['role'] === 'admin'){?>
-                                        <td>
-                                            <div class="d-flex">
-                                                t là chủ web t thích làm j kệ t
-                                            </div>
-                                        </td>
-                                        <?php }?>
-                                </tr>
-                                    <?php }?>
+                                    <?php } ?>
 
+                                </tr>
+                                    
+                                        <?php }?>
                         </tbody>
                     </table>
                 </div>

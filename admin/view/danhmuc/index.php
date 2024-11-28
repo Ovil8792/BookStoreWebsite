@@ -37,9 +37,6 @@
                         </thead>
                         <tbody>
                                 <?php
-                                include_once "../admin/controller/DanhMuc.php";
-                                $dl = new DanhMucCTL();
-                                $listDanhMuc = $dl->listDaMu();
                                 foreach ($listDanhMuc as $value) {
                                 ?>
                                 <tr>

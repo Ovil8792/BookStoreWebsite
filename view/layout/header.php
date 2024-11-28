@@ -59,7 +59,7 @@
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
                 <a href="index.php" class="navbar-brand">
                     <!-- <h1 class="text-primary display-6">Fruitables</h1> -->
-                     <img width="20%" src="https://i.pinimg.com/564x/95/f8/58/95f8588d6469a16271ea2d2fad419d00.jpg" alt="logo">
+                     <img width="27%" src="./assets/img/lg.png" alt="logo">
                 </a>
                 <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -72,16 +72,11 @@
                         <a href="shop-detail.html" class="nav-item nav-link">Về chúng tôi </a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Các thể loại</a>
-                            <?php
-                                 include_once "../BookStoreWebsite/controller/danhmuc/DanhMuc.php";
-                                 $dsd = new DaMu();
-                                 $edata = $dsd->getlistDM();
-                                 
-                                
-                                 ?>
+                            
                             <div class="dropdown-menu m-0 bg-secondary rounded-0">
                                 <!-- thêm đường dẫn trang cart ở đây -->
                                  <?php
+                                 //print_r($edata);
                                  foreach($edata  as $key => $value){
                                  ?>
                                 <a href="#" style="" class="dropdown-item"><?=$value['ten_danh_muc']?></a>

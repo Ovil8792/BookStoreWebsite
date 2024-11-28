@@ -38,10 +38,8 @@
                     </thead>
                     <tbody>
                         <?php
-                        include_once "../admin/controller/Binhluan.php";
-                        $bl = new BinhLuanCTL();
-                        $listbl = $bl->HienBL();
-                        foreach ($listbl as $value) {
+                       
+                        foreach ($listBL as $value) {
                         ?>
                             <tr>
                                 <td><?= $value['id'] ?></td>

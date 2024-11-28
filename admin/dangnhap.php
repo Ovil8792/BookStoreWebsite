@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Đăng nhập thành công
             session_start();
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            if($user['role'] == 'admin') {
+            if($user['role'] == 'admin' || $user['role'] == 'coAD') {
             $_SESSION['admin']=$user ;
             echo "Đăng nhập thành công";
             // var_export($_SESSION['admin']);

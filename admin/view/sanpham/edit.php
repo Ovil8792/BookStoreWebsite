@@ -20,14 +20,6 @@
                     <h4 class="card-title">Sản phẩm</h4>
                 </div>
                 <div class="card-body">
-<?php
- include_once "../admin/controller/SanPham.php";
- $dl = new SPCTL();
- $dm = new DanhMucCTL();
- $dtdm = $dm->listDaMu(); 
-$data= $dl->ShowSuaSP();
-
-?>
                     <form action="index.php?act=suaSP&id=<?=$data['id_sp']?>" method="POST">
                     <div class="mb-3">
  
@@ -42,7 +34,7 @@ $data= $dl->ShowSuaSP();
                              <label for="iddm" class="form-label">Danh mục</label>
                              <select name="iddm" id="iddm" class="form-select">
                                 <?php
-                                foreach($dtdm as $value){
+                                foreach($dm as $value){
                                 ?>
                                 <option <?=$data['id_danh_muc'] == $value['id_danh_muc']?"selected" :"" ?> value="<?=$value['id_danh_muc']?>"><?=$value['id_danh_muc']?>.<?=$value['ten_danh_muc']?></option>
 
