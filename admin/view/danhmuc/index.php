@@ -48,8 +48,13 @@
                                     <td>
                                         <div class="d-flex">
                                             <a class="btn btn-secondary" href="index.php?act=suadanhmuc&id=<?=$value['id_danh_muc']?>">Sửa</a>
-                                            <a class="btn btn-danger" href="">Ẩn</a>
+                                                <?php if($value['stat'] == 1){?>
+                                            <a class="btn btn-danger" href="index.php?act=hide&id=<?=$value['id_danh_muc']?>">Ẩn</a>
+                                                <?php }elseif($value['stat'] == 0){     ?>        
+                                            <a class="btn btn-primary" href="index.php?act=show&id=<?=$value['id_danh_muc']?>">Hiện</a>
+                                                    <?php  }?>
 
+                                                   
                                         </div>
                                     </td>
                                 </tr>

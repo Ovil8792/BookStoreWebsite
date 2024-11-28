@@ -36,9 +36,35 @@ class DanhMucCTL{
         }
       
     }
-    public function fileTransfer(){
+    public function anDM(){
         
+            $dm = new danhmuc();
+            $id= $_GET['id'];
+            $dm->AnDM($id);
+            echo "
+            <p style='margin-top:200px' class='alert alert-success d-flex justify-content-center' role='alert'>Ẩn thành công, đợi 3s để về lại trang danh mục</p>
+            <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        setTimeout(()=>{window.location.href='index.php?act=danhmuc'},3000)
+    })
+</script>";
+        
+    }
+    public function hienDM(){
+        $dm = new danhmuc();
+        $id= $_GET['id'];
+        $dm->HienDM($id);
+        echo "
+        <p style='margin-top:200px' class='alert alert-success d-flex justify-content-center' role='alert'>Hiện thành công, đợi 3s để về lại trang danh mục</p>
+        <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        setTimeout(()=>{window.location.href='index.php?act=danhmuc'},3000)
+    })
+</script>";
+
     }
     
 }
+
+?>
 

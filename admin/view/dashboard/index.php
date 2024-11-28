@@ -1,7 +1,7 @@
 
 
     <div class="page-heading">
-        <h3>Profile Statistics</h3>
+        <h3>Doanh thu</h3>
     </div>
     <div class="page-content">
         <section class="row">
@@ -270,6 +270,3 @@
             </div>
         </section>
     </div>
-    <?php
-//    include_once("./view/layouts/footer.php");
-    ?>

@@ -70,9 +70,6 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
         case "upload":
             $SP->fileTransfer();
             break;
-        case "hoadon":
-
-            break;
         case "taikhoan":
             include_once "./view/taikhoan/index.php";
             break;
@@ -85,8 +82,11 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
         case "chitiethoadon":
             include_once "./view/chitiethoadon/index.php";
             break;
-        case "edithd":
-            $CTHD -> editCTHD();
+        case "show":
+           $DMC->hienDM();
+            break;
+        case "hide":
+            $DMC->anDM();
             break;
     }
 } else {

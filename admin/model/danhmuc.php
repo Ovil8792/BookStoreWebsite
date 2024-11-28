@@ -24,4 +24,12 @@ public function SuaDanhMuc($id, $name)
     $sql = "UPDATE $this->table SET ten_danh_muc = '$name' WHERE id_danh_muc = '$id'";
     return pdo_execute($sql);
 }
+public function AnDM($id){
+    $sql= "UPDATE $this->table SET stat=0 WHERE id_danh_muc=$id";
+    return pdo_execute($sql);
+}
+public function HienDM($id){
+    $sql= "UPDATE $this->table SET stat=1 WHERE id_danh_muc=$id";
+    return pdo_execute($sql);
+}
 }

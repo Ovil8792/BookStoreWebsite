@@ -65,7 +65,7 @@
                                         <a href="#" class="btn btn-primary">Sửa ảnh</a>
                                         <a href="index.php?act=editsp&id=<?= $value['id_sp'] ?>"
                                             class="btn btn-primary">Sửa</a>
-                                        <a href="index.php?act=delsp&id=<?= $value['id_sp'] ?>" class="btn btn-danger">Xóa</a>
+                                        <a onclick="return confirm('Bạn có chắc chắn muốn xoá không?')" href="index.php?act=delsp&id=<?= $value['id_sp'] ?>" class="btn btn-danger">Xóa</a>
                                     </td>
                                 </tr>
                             <?php } ?>

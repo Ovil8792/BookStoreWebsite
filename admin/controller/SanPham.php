@@ -27,7 +27,7 @@ class SPCTL{
         if(isset($_POST['edit'])){
             $name = $_POST['name'];
             $price = $_POST['price'];
-            $anhsp = "";
+            $anhsp = $_POST['anhsp'];
             $iddm = $_POST['iddm'];
             $tgia = $_POST['tgia'];
             $ngayxb = $_POST['ngayxb'];
