@@ -310,7 +310,7 @@
                             </div>
                             <div class="d-flex align-items-center flex-nowrap">
                                 <div class="bg-secondary rounded">
-                                    <img src="./assets/img/a2.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                    <img src="./assets/img/a3.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                                 </div>
                                 <div class="ms-4 d-block">
                                     <h4 class="text-dark">Trần Văn Duy</h4>
@@ -330,12 +330,12 @@
                     <div class="position-relative">
                             <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
                             <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Gaio hàng nhanh chóng, giá thành phải chăng , chất lượng tốt,
+                                <p class="mb-0">Giao hàng nhanh chóng, giá thành phải chăng , chất lượng tốt,
                                 </p>
                             </div>
                             <div class="d-flex align-items-center flex-nowrap">
                                 <div class="bg-secondary rounded">
-                                    <img src="./assets/img/a3.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                    <img src="./assets/img/a2.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
                                 </div>
                                 <div class="ms-4 d-block">
                                     <h4 class="text-dark">Trần Thị Hoa</h4>
