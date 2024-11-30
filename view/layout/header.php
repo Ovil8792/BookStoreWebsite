@@ -59,7 +59,7 @@
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
                 <a href="index.php" class="navbar-brand">
                     <!-- <h1 class="text-primary display-6">Fruitables</h1> -->
-                     <img width="27%" src="./assets/img/lg.png" alt="logo">
+                     <img class="logo" width="27%" src="./assets/img/lg.png" alt="logo">
                 </a>
                 <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -67,9 +67,9 @@
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
-                        <a href="index.html" class="nav-item nav-link active">Trang chủ</a>
-                        <a href="shop.html" class="nav-item nav-link">Cửa hàng</a>
-                        <a href="shop-detail.html" class="nav-item nav-link">Về chúng tôi </a>
+                        <a href="index.php" class="nav-item nav-link active">Trang chủ</a>
+                        <a href="index.php?act=shop" class="nav-item nav-link">Cửa hàng</a>
+                        <a href="#" class="nav-item nav-link">Về chúng tôi </a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Các thể loại</a>
                             
@@ -93,7 +93,7 @@
                             class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4"
                             data-bs-toggle="modal" data-bs-target="#searchModal"><i
                                 class="fas fa-search text-primary"></i></button>
-                        <a href="#" class="position-relative me-4 my-auto">
+                        <a href="index.php?act=cart" class="position-relative me-4 my-auto">
                             <i class="fa fa-shopping-bag fa-2x"></i>
                             <span
                                 class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
