@@ -59,7 +59,7 @@
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
                 <a href="index.php" class="navbar-brand">
                     <!-- <h1 class="text-primary display-6">Fruitables</h1> -->
-                     <img width="27%" src="./assets/img/lg.png" alt="logo">
+                     <img width="17%" src="./assets/img/lg.png" alt="logo">
                 </a>
                 <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
