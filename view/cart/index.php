@@ -28,7 +28,6 @@
                         </thead>
                         <tbody>
                             <?php
-                            //var_export($listGH);
                                 foreach($listGH as $item){
                             ?>
                             <tr>
@@ -41,7 +40,7 @@
                                     <p class="mb-0 mt-4"><?=$item['ten_sp']?></p>
                                 </td>
                                 <td>
-                                    <p class="mb-0 mt-4"><?=number_format($item['gia'])?></p>
+                                    <p class="mb-0 mt-4"><?=number_format($item['gia'],0,",",".")?></p>
                                 </td>
                                 <td>
                                     <div class="input-group quantity mt-4" style="width: 100px;">
@@ -50,7 +49,7 @@
                                             <i class="fa fa-minus"></i>
                                             </button>
                                         </div>
-                                        <input type="text" class="form-control form-control-sm text-center border-0" value="1">
+                                        <input type="text" class="form-control form-control-sm text-center border-0" value="<?=$item['soLuong']?>">
                                         <div class="input-group-btn">
                                             <button class="btn btn-sm btn-plus rounded-circle bg-light border">
                                                 <i class="fa fa-plus"></i>
@@ -59,7 +58,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <p class="mb-0 mt-4">2.99 $</p>
+                                    <p class="mb-0 mt-4"><?=number_format($item['gia'] * $item['soLuong'])?></p>
                                 </td>
                                 <td>
                                     <button class="btn btn-md rounded-circle bg-light border mt-4" >

@@ -26,6 +26,9 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
             include_once $_SERVER['DOCUMENT_ROOT']."/controller/shop/index.php";
 
             break;
+        case "ctsp":
+            showSPById();
+            break;
     }
 }else{
 include_once $_SERVER['DOCUMENT_ROOT']."/view/home/home.php";

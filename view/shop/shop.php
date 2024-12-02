@@ -167,9 +167,9 @@
                                         </div>
                                         <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
                                         <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4><?=$v['ten_sp']?></h4>
+                                            <h4><a href="index.php?act=ctsp&id=<?=$v['id_sp']?>"><?=$v['ten_sp']?></a></h4>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                                <p class="text-dark fs-5 fw-bold mb-0"><?=number_format($v['gia'])?></p>
+                                                <p class="text-dark fs-5 fw-bold mb-0"><?=number_format($v['gia'],0,",",".")?> VND</p>
                                                 <a href="index.php?act=addToCart&id=<?=$v['id_sp']?>" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ hàng</a>
                                             </div>
                                         </div>

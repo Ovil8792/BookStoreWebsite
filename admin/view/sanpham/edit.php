@@ -46,8 +46,8 @@
                             <input type="date" class="form-control" id="ngayxb" name="ngayxb" value="<?=$data['ngay_xb']?>" required>
                             <label for="tinhtrang">Tình trạng</label><br>
                             <span class="form-control" id="tinhtrang" name="tinhtrang">
-                                <input class="form-check-input mt-0" name="tinhtrang" id="hethang" value="hết hàng" type="radio" aria-label="Radio button for following text input"><span class="badge rounded-pill text-bg-danger">Hết hàng</span><br>
-                                <input class="form-check-input mt-0" name="tinhtrang" id="conhang" value="còn hàng" type="radio" aria-label="Radio button for following text input"><span class="badge rounded-pill text-bg-success">Còn hàng</span>
+                                <input class="form-check-input mt-0" name="tinhtrang" id="hethang" value="hết hàng" type="radio" <?php if($data['tinh_trang'] == 'hết hàng'){echo "checked";}elseif($data['tinh_trang'] == 'còn hàng'){ echo "";} ?>><span class="badge rounded-pill text-bg-danger">Hết hàng</span><br>
+                                <input class="form-check-input mt-0" name="tinhtrang" id="conhang" value="còn hàng" type="radio" <?php if($data['tinh_trang'] == 'còn hàng'){echo "checked";}elseif($data['tinh_trang'] == 'hết hàng'){echo "";} ?>><span class="badge rounded-pill text-bg-success">Còn hàng</span>
                             </span><br>
                         </div>
 

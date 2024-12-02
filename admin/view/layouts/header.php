@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ Admin</title>
 <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Tempus Dominus CSS -->
 <link href="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus/dist/css/tempus-dominus.min.css" rel="stylesheet">
 
@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./asset/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="./asset/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="./asset/css/app.css">
+    <link rel="stylesheet" href="<?=$_SERVER['DOCUMENT_ROOT']?>/admin/asset/css/style.css">
     <link rel="shortcut icon" href="./asset/images/favicon.svg" type="image/x-icon">
 </head>
 <style>
@@ -30,6 +31,7 @@
 </style>
 
 <body>
+    
     <div id="app">
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
@@ -95,7 +97,7 @@
         <a style="width:10%" href="#" class="burger-btn d-block d-xl-none">
             <i class="bi bi-justify fs-3"></i>
         </a>
-        <div style="width:75%"></div>
+        <div style="width:75%"><?//=$_SERVER['DOCUMENT_ROOT']."/admin/asset/css/style.css"?></div>
         <div style="width:15%">
        <img width="40px" src="./asset/images/circle.png" alt="user" id="logouser">
         </div>

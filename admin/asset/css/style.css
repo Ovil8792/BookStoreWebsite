@@ -30,3 +30,16 @@
 body{
     background-image: url();
 }
+.ovf{
+    .container {
+        width: 200px; /* Đặt chiều rộng khung */
+        height: 30px; /* Đặt chiều cao khung */
+        overflow: hidden; /* Ẩn phần chữ vượt ra ngoài */
+        display: -webkit-box; /* Thiết lập khung flexbox */
+        -webkit-line-clamp: 3; /* Giới hạn số dòng hiển thị */
+        line-clamp: 3;
+        -webkit-box-orient: vertical; /* Định hướng khung theo chiều dọc */
+        text-overflow: ellipsis; /* Hiển thị dấu "..." */
+    }
+    
+}

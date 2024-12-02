@@ -37,6 +37,7 @@
                                 <td>Tác giả</td>
                                 <td>Ngày xuất bản</td>
                                 <td>Tình trạng</td>
+                                <td>Mô tả</td>
                                 <td>Action</td>
                             </tr>
                         </thead>
@@ -58,6 +59,7 @@
                                     <td><span
                                             class="<?= $value['tinh_trang'] == "còn hàng" ? "badge rounded-pill text-bg-success" : " badge rounded-pill text-bg-danger" ?>"><?= $value['tinh_trang'] ?></span>
                                     </td>
+                                    <td><div class="overflow-auto"><?=$value['mota']?></div></td>
                                     <td class="d-flex">
                                         <a href="#" class="btn btn-primary">Sửa ảnh</a>
                                         <a href="index.php?act=editsp&id=<?= $value['id_sp'] ?>"
