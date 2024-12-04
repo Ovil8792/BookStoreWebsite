@@ -49,6 +49,8 @@
                                 <input class="form-check-input mt-0" name="tinhtrang" id="hethang" value="hết hàng" type="radio" <?php if($data['tinh_trang'] == 'hết hàng'){echo "checked";}elseif($data['tinh_trang'] == 'còn hàng'){ echo "";} ?>><span class="badge rounded-pill text-bg-danger">Hết hàng</span><br>
                                 <input class="form-check-input mt-0" name="tinhtrang" id="conhang" value="còn hàng" type="radio" <?php if($data['tinh_trang'] == 'còn hàng'){echo "checked";}elseif($data['tinh_trang'] == 'hết hàng'){echo "";} ?>><span class="badge rounded-pill text-bg-success">Còn hàng</span>
                             </span><br>
+                            <label for="mota">Mô tả</label>
+                            <textarea class="form-control" name="mota" id="mota" value="<?=$data['mota']?>" rows="4"></textarea>
                         </div>
 
                         <button type="submit" id="edit" name="edit" class="btn btn-primary">Sửa</button>

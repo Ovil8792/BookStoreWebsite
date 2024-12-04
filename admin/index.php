@@ -13,6 +13,8 @@ include_once "./view/layouts/header.php";
 // include_once "./controller/DashBoard.php";
  include_once "./controller/SanPham.php";
 include_once $_SERVER['DOCUMENT_ROOT']."/admin/controller/Binhluan.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/admin/controller/Hoadon.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/admin/controller/DashBoard.php";
 include_once "./controller/User.php";
 
 include_once "./controller/Hoadon.php";
@@ -70,9 +72,9 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
         case "hoadon":
             HienHD();
             break;
-        // case "chitiethoadon":
-        //     include_once "./view/chitiethoadon/index.php";
-        //     break;
+        case "chitiethoadon":
+            getCTHD();
+            break;
         case "show":
            hienDaMu();
             break;
@@ -82,7 +84,7 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
     }
 }
  else {
-    include_once 'view/dashboard/index.php';
+    dashboardShow();
 }
 include_once $_SERVER['DOCUMENT_ROOT']."/admin/view/layouts/footer.php";
  }

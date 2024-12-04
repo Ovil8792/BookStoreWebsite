@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -29,7 +30,7 @@
     <link href="./assets/css/style.css" rel="stylesheet">
 </head>
 
-<body >
+<body>
 
     <!-- Spinner Start -->
     <!-- <div id="spinner"
@@ -59,32 +60,32 @@
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
                 <a href="index.php" class="navbar-brand">
                     <!-- <h1 class="text-primary display-6">Fruitables</h1> -->
-                     <img width="17%" src="./assets/img/lg.png" alt="logo">
+                    <img width="17%" src="./assets/img/lg.png" alt="logo">
                 </a>
                 <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars text-primary"></span>
                 </button>
-                <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                <div class="collapse navbar-collapse bg-white" style="margin-left:-70px;" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
                         <a href="index.php" class="nav-item nav-link active">Trang chủ</a>
                         <a href="index.php?act=shop" class="nav-item nav-link">Cửa hàng</a>
-                        <a href="#" class="nav-item nav-link">Về chúng tôi </a>
+                        <a href="index.php?act=about" class="nav-item nav-link">Về chúng tôi </a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Các thể loại</a>
-                            
+
                             <div class="dropdown-menu m-0 bg-secondary rounded-0">
                                 <!-- thêm đường dẫn trang cart ở đây -->
-                                 <?php
-                                 //print_r($edata);
-                                 foreach($edata  as $key => $value){
-                                 ?>
-                                <a href="#" style="" class="dropdown-item"><?=$value['ten_danh_muc']?></a>
                                 <?php
-                                   }
+                                //print_r($edata);
+                                foreach ($edata as $key => $value) {
+                                    ?>
+                                    <a href="#" style="" class="dropdown-item"><?= $value['ten_danh_muc'] ?></a>
+                                    <?php
+                                }
                                 ?>
                             </div>
-                            
+
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Hỗ trợ</a>
                     </div>
@@ -99,9 +100,15 @@
                                 class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
                                 style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
                         </a>
-                        <a href="#" class="my-auto">
-                            <i class="fas fa-user fa-2x"></i>
-                        </a>
+                        <div class="dropdown">
+                            <a href="#" class="my-auto fas fa-user fa-2x" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.php?act=ctnd">Quản lý tài khoản</a></li>
+                                <li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                        <p class="nav-link">Xin chào <?=$dataUser['ho_ten']?></p>
                     </div>
                 </div>
             </nav>
@@ -109,20 +116,20 @@
     </div>
     <!-- Navbar End -->
     <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nhập từ khóa</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="từ khóa" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nhập từ khóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                    <div class="input-group w-75 mx-auto d-flex">
+                        <input type="search" class="form-control p-3" placeholder="từ khóa"
+                            aria-describedby="search-icon-1">
+                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Modal Search End -->
-
+    </div>
+    <!-- Modal Search End -->

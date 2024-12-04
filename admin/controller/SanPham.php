@@ -34,7 +34,8 @@ include_once $_SERVER['DOCUMENT_ROOT']."/admin/model/danhmuc.php";
             $tgia = $_POST['tgia'];
             $ngayxb = $_POST['ngayxb'];
             $tinhtrang = $_POST['tinhtrang'];
-            SuaSP($id,$name,$price,$anhsp,$iddm,$tgia,$ngayxb,$tinhtrang);
+            $mota = $_POST['mota'];
+            SuaSP($id,$name,$price,$anhsp,$iddm,$tgia,$ngayxb,$tinhtrang,$mota);
             echo "<div style='margin-top:200px' class='alert alert-success d-flex justify-content-center' role='alert'>Sửa thành công, bấm <a style='color:blue;font-weight:bold;' href='index.php?act=sanpham'> vào đây </a> để về trang danh sách</div>";
         }
     }
@@ -61,13 +62,13 @@ include_once $_SERVER['DOCUMENT_ROOT']."/admin/model/danhmuc.php";
             $uploadOk = 0;
         }
         // Check file size
-        if ($_FILES["anhsp"]["size"] > 500000) {
+        if ($_FILES["anhsp"]["size"] > 100000000) {
             echo "Sorry, your file is too large.";
             $uploadOk = 0;
         }
         // Allow certain file formats
         if($imageFileType!= "jpg" && $imageFileType!= "png" && $imageFileType!= "jpeg"
-        && $imageFileType!= "gif" ) {
+        && $imageFileType!= "gif" &&$imageFileType!= "webp" ) {
             echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
             $uploadOk = 0;
         }
@@ -109,7 +110,8 @@ include_once $_SERVER['DOCUMENT_ROOT']."/admin/model/danhmuc.php";
             $tgia =$_POST['tgia'];
             $ngayxb =$_POST['ngayxb'];
             $tinhtrang=$_POST['tinhtrang'];
-            add($name,$price,$anhsp,$iddm,$tgia,$ngayxb,$tinhtrang);
+            $mota = $_POST['mota'];
+            add($name,$price,$anhsp,$iddm,$tgia,$ngayxb,$tinhtrang,$mota);
             echo "<div class='alert alert-success d-flex justify-content-center' role='alert'>Thêm thành công, bấm <a href='index.php?act=sanpham'>vào đây</a> để về trang danh sách</div>";
         }
     }

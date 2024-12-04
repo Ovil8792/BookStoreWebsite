@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
             if ($id == $item['id']) {
                 $tonTaiTrongGioHang = true;
                 $_SESSION['gioHang'][$key]['soLuong'] += 1;
-                break;
+                
             }
         }
         if ($tonTaiTrongGioHang == false) {

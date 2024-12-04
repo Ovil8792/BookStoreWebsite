@@ -28,7 +28,7 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
-                        <h4 class="text-light mb-3">Tại sao mọi người thích vhusng tôi !!</h4>
+                        <h4 class="text-light mb-3">Tại sao mọi người thích chúng tôi !!</h4>
                             <p class="mb-4">Đa số mọi người thấy chúng tôi là một cửa hàng vô cùng đã dạng với giá thành phải chăng và chế độ hậu thuẫn sau khi mua hàng rất tốt</p>
                             <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Xem thêm</a>
                         </div>
@@ -38,7 +38,7 @@
                         <h4 class="text-light mb-3">Thông tin cửa hàng </h4>
                             <a class="btn-link" href="">về chúng tôi</a>
                             <a class="btn-link" href="">liên hệ</a>
-                            <a class="btn-link" href="">chíng sách bảo mật</a>
+                            <a class="btn-link" href="">chính sách bảo mật</a>
                             <a class="btn-link" href="">điều khoản và điều kiện</a>   
                             <a class="btn-link" href="">chính sách hoàn trả</a>
                             <a class="btn-link" href="">câu hỏi thường gặp </a>
@@ -62,7 +62,7 @@
                             <p>Email: tamuoon@gmail.com</p>
                             <p>Phone: 0904043528</p>
                             <p>Các phương thức thanh toán</p>
-                            <img src="../img/payment.png" class="img-fluid" alt="">
+                            <img src="assets/img/payment.png" class="img-fluid" alt="">
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>BookStore</a>, All right reserved.</span>
                     </div>
                     <div class="col-md-6 my-auto text-center text-md-end text-white">
                         <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->

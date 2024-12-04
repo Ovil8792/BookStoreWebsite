@@ -53,7 +53,8 @@
                                 <input class="form-check-input mt-0" name="tinhtrang" id="hethang" value="hết hàng" type="radio" aria-label="Radio button for following text input"><span class="badge rounded-pill text-bg-danger">Hết hàng</span><br>
                                 <input class="form-check-input mt-0" name="tinhtrang" id="conhang" value="còn hàng" type="radio" aria-label="Radio button for following text input"><span class="badge rounded-pill text-bg-success">Còn hàng</span>
                             </span><br>
-                            
+                            <label for="mota">Mô tả</label>
+                            <textarea class="form-control" name="mota" id="mota" rows="5"></textarea>
 
                         </div>
                         <button type="submit" id="add" name="add" class="btn btn-primary">Thêm</button>

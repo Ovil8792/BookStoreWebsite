@@ -30,7 +30,7 @@
                     <table class="table table-striped" id="table1">
                         <thead>
                             <tr>
-                                <th class="col-2">ID tài khoản</th>
+                                <th>ID tài khoản</th>
                                 <th>Tên người dùng</th>
                                 <th>Email</th>
                                 <th>Họ tên</th>

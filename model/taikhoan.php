@@ -1,0 +1,16 @@
+<?php
+include_once "pdo.php";
+function checkDN($username, $password){
+    $sql = "SELECT * FROM tai_khoan WHERE username_cli='$username' AND password_cli='$password'";
+    return pdo_query_one($sql);
+}
+function updateUser($id,$hoten,$files,$email,$diachi,$sodt){
+    
+    if($files == ''){
+    $sql="UPDATE tai_khoan SET ho_ten='$hoten',email_cli='$email',dia_chi='$diachi',sdt='$sodt' WHERE id_user='$id'";
+    }else{
+    $sql="UPDATE tai_khoan SET ho_ten='$hoten',avatar='$files',email_cli='$email',dia_chi='$diachi',sdt='$sodt' WHERE id_user='$id'";
+    }
+    return pdo_execute($sql);
+}
+

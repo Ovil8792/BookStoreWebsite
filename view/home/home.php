@@ -17,12 +17,16 @@
                         <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active rounded">
-                                    <img src="../assets/img/hero-img-1.png" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
-                                    <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a>
+                                    <img src="./admin/uploads/ana.png" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                                    <!-- <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a> -->
                                 </div>
                                 <div class="carousel-item rounded">
-                                    <img src="../assets/img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
-                                    <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
+                                    <img src="./admin/uploads/anb.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                    <!-- <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a> -->
+                                </div>
+                                <div class="carousel-item rounded">
+                                    <img src="./admin/uploads/anc.png" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                    <!-- <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a> -->
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -129,7 +133,7 @@
         <!-- Vesitable Shop Start-->
         <div class="container-fluid vesitable py-5">
             <div class="container py-5">
-                <h1 class="mb-0">Fresh Organic Vegetables</h1>
+                <h1 class="mb-0">Các loại sách gần đây</h1>
                     
                 <div class="owl-carousel vegetable-carousel justify-content-center">
                 <?php
@@ -163,20 +167,20 @@
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-6">
                         <div class="py-4">
-                            <h1 class="display-3 text-white">Fresh Exotic Fruits</h1>
-                            <p class="fw-normal display-3 text-dark mb-4">in Our Store</p>
-                            <p class="mb-4 text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
-                            <a href="#" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
+                            <h1 class="display-3 text-white">Những cuốn sách đặc biệt </h1>
+                            <p class="fw-normal display-3 text-dark mb-4">chỉ có ở cửa hàng chúng tôi</p>
+                            <p class="mb-4 text-dark">những cuốn sách đặc biệt ở trên thế giới đã có mặt duy nhất ở cửa hàng của chúng tôi,với giá thành vô cùng phải chăng</p>
+                            <a href="#" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">MUA NGAY</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="position-relative">
-                            <img src="./assets/img/baner-1.png" class="img-fluid w-100 rounded" alt="">
-                            <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style="width: 140px; height: 140px; top: 0; left: 0;">
-                                <h1 style="font-size: 100px;">1</h1>
+                            <img src="./assets/img/img.jpg" class="img-fluid w-100 rounded" alt="">
+                            <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style="width: 150px; height: 150px; top: 0; left: 0;">
+                                <h1 style="font-size: 90px;">1</h1>
                                 <div class="d-flex flex-column">
-                                    <span class="h2 mb-0">50$</span>
-                                    <span class="h4 text-muted mb-0">kg</span>
+                                    <span class="h3 mb-0"><?=number_format(20000)?>đ</span>
+                                    <span class="h4 text-muted mb-0">cuốn</span>
                                 </div>
                             </div>
                         </div>
@@ -191,8 +195,8 @@
         <div class="container-fluid py-5">
             <div class="container py-5">
                 <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-                    <h1 class="display-4">Bestseller Products</h1>
-                    <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                    <h1 class="display-4">Các sản phẩm bán chạy</h1>
+                    <!-- <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p> -->
                 </div>
                 <div class="row g-4">
 
@@ -213,7 +217,7 @@
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star"></i>
                                     </div>
-                                    <h4 class="mb-3"><?=$formatted = number_format($k['gia'],0,',','.')?>VND</h4>
+                                    <h4 class="mb-3"><?=number_format($k['gia'],0,',','.')?>VND</h4>
                                     <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                 </div>
                             </div>

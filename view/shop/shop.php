@@ -68,30 +68,17 @@
                                     range.value = roundedValue;
                                 }
                             </script>
-                            <!-- <div class="col-lg-12">
-                                <div class="mb-3">
-                                    <h4 class="mb-2">Price</h4>
-                                    <input
-                                        type="range"
-                                        class="form-range w-100"
-                                        id="rangeInput"
-                                        name="rangeInput"
-                                        min="100"
-                                        max="5000"
-                                        value="10"
-                                        step="10"
-                                        oninput="updateValue()">
-                                    <p><output id="amount" name="amount" for="rangeInput">100</output>.000</p>
-                                </div>
-                            </div> -->
+
                             <div class="col-lg-12">
                                 <h4 class="mb-3">Featured products</h4>
+
+                                <?php foreach($data as $k){ ?>
                                 <div class="d-flex align-items-center justify-content-start">
                                     <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                        <img src="img/featur-1.jpg" class="img-fluid rounded" alt="">
+                                        <img width="70%" src="/admin/uploads/<?=$k['anh_sp']?>" class="img-fluid" alt="">
                                     </div>
                                     <div>
-                                        <h6 class="mb-2">Big Banana</h6>
+                                        <h6 class="mb-2"><?=$k['ten_sp']?></h6>
                                         <div class="d-flex mb-2">
                                             <i class="fa fa-star text-secondary"></i>
                                             <i class="fa fa-star text-secondary"></i>
@@ -100,49 +87,12 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                         <div class="d-flex mb-2">
-                                            <h5 class="fw-bold me-2">2.99 $</h5>
-                                            <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
+                                            <h5 class="fw-bold me-2"><?=number_format($k['gia'],0,",",".")?></h5>
+                                            <h5>VND</h5>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                        <img src="img/featur-2.jpg" class="img-fluid rounded" alt="">
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-2">Big Banana</h6>
-                                        <div class="d-flex mb-2">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <h5 class="fw-bold me-2">2.99 $</h5>
-                                            <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="rounded me-4" style="width: 100px; height: 100px;">
-                                        <img src="img/featur-3.jpg" class="img-fluid rounded" alt="">
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-2">Big Banana</h6>
-                                        <div class="d-flex mb-2">
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star text-secondary"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <h5 class="fw-bold me-2">2.99 $</h5>
-                                            <h5 class="text-danger text-decoration-line-through">4.11 $</h5>
-                                        </div>
-                                    </div>
-                                </div>
+                               <?php } ?>
                                 <div class="d-flex justify-content-center my-4">
                                     <a href="#" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">Vew More</a>
                                 </div>

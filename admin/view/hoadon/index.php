@@ -2,7 +2,7 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3 id="datacheck">DataTable</h3>
+                <h3 id="datacheck">Hóa đơn</h3>
                 <p class="text-subtitle text-muted">For user to check they list</p>
             </div>
 
@@ -47,14 +47,14 @@
                                 <td><?= $value['id_nguoidung'] ?></td>
                                 <td><?= $value['phuongthucthanhtoan'] ?></td>
                                 <td><?= $value['tinhtrang'] ?></td>
-                                <td><?= $value['tongtien'] ?></td>
+                                <td><?= $value['total'] ?></td>
                                 <td><?= $value['ho_ten'] ?></td>
                                 <td><?= $value['dia_chi'] ?></td>
                                 <td><?= $value['so_dt'] ?></td>
                                 <td>
                                     <div class="d-flex">
 
-                                        <a class="btn btn-primary" href="index.php?act=chitiethoadon&id_nguoidung=<?= $value['id_nguoidung'] ?>">Chi tiết</a>
+                                        <a class="btn btn-primary" href="index.php?act=chitiethoadon&id=<?= $value['id_nguoidung'] ?>">Chi tiết</a>
 
                                     </div>
                                 </td>

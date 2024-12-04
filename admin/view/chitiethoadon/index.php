@@ -21,38 +21,64 @@
         <div class="card">
             <div class="card-header">
                 Chi Tiết Hóa Đơn
+                <?php //var_export($hoaDonChiTiet);  ?>
             </div>
             <div class="card-body">
-                <table class="table table-striped" id="table1">
-                    <thead>
-                        <tr>
-                            <td>ID</td>
-                            <td>Mã Hóa Đơn</td>
-                            <td>Giá</td>
-                            <td>Số Lượng</td>
-                            <td>Mã Sản Phẩm</td>
-                            <td>Thao Tác</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        include_once "../admin/controller/Chitiethoadon.php";
-                        $data = new ChiTietHoaDonCTL();
-                        $cthd = $data->ShowCTHD();
-                        foreach ($cthd as $value) {
-
-                        ?>
-                            <tr>
-                                <td><?= $value['id'] ?></td>
-                                <td><?= $value['id_hoa_don'] ?></td>
-                                <td><?= $value['gia' * 'soluong'] ?></td>
-                                <td><?= $value['soluong'] ?></td>
-                                <td><?= $value['id_sp'] ?></td>
-                            </tr>
-                        <?php } ?>
-
-                    </tbody>
-                </table>
+                <form action="" method="POST">
+                   <div class="mb-3">
+                   <label class="form-label" for="name">Tên người nhận</label>
+                   <input type="text" disabled value="<?=$hoaDonChiTiet['ho_ten']?>" class="form-control" id="name" name="name">
+                   </div>
+                   <div class="mb-3">
+                   <label class="form-label" for="address">Địa chỉ người nhận</label>
+                   <input type="text" disabled value="<?=$hoaDonChiTiet['dia_chi']?>" class="form-control" id="address" name="address">
+                   </div>
+                   <div class="mb-3">
+                   <label class="form-label" for="number">Số ĐT</label>
+                   <input type="text" disabled value="<?=$hoaDonChiTiet['so_dt']?>" class="form-control" id="number" name="number">
+                   </div>
+                   <div class="mb-3">
+                   <label class="form-label" for="total">Số tiền thanh toán</label>
+                   <input type="text" disabled value="<?=$hoaDonChiTiet['total']?>" class="form-control" id="total" name="total">
+                   </div>
+                   <div class="mb-3">
+                   <label class="form-label" for="stat" >Trạng thái</label>
+                   <select name="stat" id="stat" class="form-select">
+                    <option <?=$hoaDonChiTiet['tinhtrang']=="Đã thanh toán"?"selected" : ""?> value="Đã thanh toán">Đã thanh toán</option>
+                    <option <?=$hoaDonChiTiet['tinhtrang']=="Chưa thanh toán"?"selected" : ""?> value="Chưa thanh toán">Chưa thanh toán</option>
+                    <option <?=$hoaDonChiTiet['tinhtrang']=="Đã hủy"?"selected" : ""?> value="Đã hủy">Đã hủy</option>
+                   </select>
+                   </div>
+                   <div class="col-12 col-md-6 order-md-1 order-last">
+                            <h3>Sản phẩm</h3>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="col-2">ID</th>
+                                    <th class="col-2">Tên sản phẩm</th>
+                                    <th class="col-2">Số lượng</th>
+                                    <th class="col-2">Ảnh SP</th>
+                                    <th class="col-2">Giá</th>
+                                    <th class="col-2">Tổng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($hoaDonInfo as $key){ ?>
+                                <tr>
+                                    <td><?=$key['id_sp']?></td>
+                                    <td><?=$key['ten_sp']?></td>
+                                    <td><?=$key['soluong']?></td>
+                                    <td><img src="/admin/uploads/<?=$key['anh_sp']?>" width="140px" alt=""></td>
+                                    <td><?=number_format($key['gia'],0,",",".")?>VND</td>
+                                    <td><?=number_format($key['gia'] * $key['soluong'])?> VND</td>
+                                </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                        <input type="hidden" name="id" value="<?= $hoaDonChiTiet['id_hoa_don'] ?>">
+                        <button class="btn btn-primary" name="edit" type="submit">Cập nhật trạng thái</button>
+                </form>
             </div>
         </div>
 

@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./asset/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="./asset/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="./asset/css/app.css">
-    <link rel="stylesheet" href="<?=$_SERVER['DOCUMENT_ROOT']?>/admin/asset/css/style.css">
+    <!-- <link rel="stylesheet" href="/admin/asset/css/style.css"> -->
     <link rel="shortcut icon" href="./asset/images/favicon.svg" type="image/x-icon">
 </head>
 <style>
@@ -49,7 +49,7 @@
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
 
-                        <li id="sad" class="sidebar-item active">
+                        <li id="sad" class="sidebar-item">
                             <a href="index.php" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Dashboard</span>
@@ -80,7 +80,7 @@
                                 <span>Tài khoản</span>
                             </a>
                         </li>
-                        <li id="sus" class="sidebar-item ">
+                        <li id="shd" class="sidebar-item ">
                             <a href="index.php?act=hoadon" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-spreadsheet-fill"></i>
                                 <span>Hóa Đơn</span>
@@ -93,12 +93,11 @@
             </div>
         </div>
         <div id="main">
-    <header class="mb-3" style="width:100%;display:flex">
+    <header class="mb-3">
         <a style="width:10%" href="#" class="burger-btn d-block d-xl-none">
             <i class="bi bi-justify fs-3"></i>
         </a>
-        <div style="width:75%"><?//=$_SERVER['DOCUMENT_ROOT']."/admin/asset/css/style.css"?></div>
+        <div style="width:75%"></div>
         <div style="width:15%">
-       <img width="40px" src="./asset/images/circle.png" alt="user" id="logouser">
         </div>
     </header>

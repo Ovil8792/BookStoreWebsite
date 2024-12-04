@@ -50,7 +50,7 @@
                                 <tr>
                                     <td><?= $value['id_sp'] ?></td>
                                     <td><?= $value['ten_sp'] ?></td>
-                                    <td><img width="10%" src="<?= $basepicdir . $value['anh_sp'] ?>"
+                                    <td><img width="80px" src="<?= $basepicdir . $value['anh_sp'] ?>"
                                             alt="<?= $value['anh_sp'] != '' ? 'anh_sp' : 'default img' ?>"></td>
                                     <td><?= $value['gia'] ?></td>
                                     <td><?= $value['id_danh_muc'] ?></td>

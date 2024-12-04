@@ -1,12 +1,12 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT']."/model/sanpham.php";
-
+require_once $_SERVER['DOCUMENT_ROOT']."/model/binhluan.php";
 include_once $_SERVER['DOCUMENT_ROOT']."/model/DanhMuc.php";
 
-     
+
         $data = DSSP();
         $edata = getDM();
-
+        
      function avatarUpload(){
         $uploaddir='uploads/';
         $target_file= $uploaddir.basename($_FILES["anhsp"]["name"]);
@@ -59,14 +59,16 @@ function showSPById(){
     $id = $_GET['id'];
     $data = getSPById($id);
     $edata = getDM();
+    $dataBl= getBLbyIdSP($_GET['id']);
+    $dt=DSSP();
     require_once $_SERVER['DOCUMENT_ROOT']."/view/product/index.php";
 }
 function checkDMfromSP(){
-    $edata = getDM();
+    // $edata = getDM();
     //$idsp = $_GET['id'];
-    foreach($edata as $key=>$value){
-        echo $key." ->";
-        print_r( $value);
-    }
+    // foreach($edata as $key=>$value){
+    //     echo $key." ->";
+    //     print_r( $value);
+    // }
 
 }
