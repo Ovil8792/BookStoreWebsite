@@ -64,11 +64,9 @@ function showSPById(){
     require_once $_SERVER['DOCUMENT_ROOT']."/view/product/index.php";
 }
 function checkDMfromSP(){
-    // $edata = getDM();
-    //$idsp = $_GET['id'];
-    // foreach($edata as $key=>$value){
-    //     echo $key." ->";
-    //     print_r( $value);
-    // }
+    $dm = getDM();
+    $spDM = getSPByDM( $_GET['id']);
+    
+    
 
 }

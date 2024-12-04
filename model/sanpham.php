@@ -9,3 +9,8 @@ include_once "pdo.php";
         $sql = "SELECT * FROM san_pham WHERE id_sp = '$id'";
         return pdo_query_one($sql);
     }
+     function getSPByDM($id){
+        $sql = "SELECT * FROM san_pham WHERE id_danh_muc = '$id'";
+        return pdo_query($sql);
+    }
+

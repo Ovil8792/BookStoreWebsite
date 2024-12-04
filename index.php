@@ -17,6 +17,7 @@ include_once $_SERVER['DOCUMENT_ROOT']."/controller/tk/ex.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/controller/cart/update.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/controller/sanpham/SanPham.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/controller/tk/UserInfo.php";
+require_once $_SERVER['DOCUMENT_ROOT']."\controller\category\index.php";
 
 
 
@@ -57,6 +58,9 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
             break;
         case "about":
             include_once $_SERVER['DOCUMENT_ROOT']."/controller/about/index.php";
+            break;
+        case "SPbyDM":
+            SPByDM();
             break;
     }
 }else{

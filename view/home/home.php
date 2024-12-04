@@ -45,58 +45,6 @@
         <!-- Hero End -->
 
 
-        <!-- Featurs Section Start -->
-        <div class="container-fluid featurs py-5">
-            <div class="container py-5">
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-car-side fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>Giao hàng siêu nhanh</h5>
-                                <p class="mb-0">Hỗ trợ giao hàng toàn quốc 24/7</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-user-shield fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>Thanh toán bảo mật</h5>
-                                <p class="mb-0">Hỗ trợ nhiều ngân hàng như Momo, Agribank, TPBank,...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fas fa-exchange-alt fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>Hoàn trả uy tín</h5>
-                                <p class="mb-0">Tối đa 7 ngày đổi trả, hoàn 100% tiền</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="featurs-item text-center rounded bg-light p-4">
-                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
-                                <i class="fa fa-phone-alt fa-3x text-white"></i>
-                            </div>
-                            <div class="featurs-content text-center">
-                                <h5>Hỗ trợ 24/7</h5>
-                                <p class="mb-0">Luôn sẵn lòng giải đáp thắc mắc của bạn</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Featurs Section End -->
 
 
         <!-- Fruits Shop Start-->
@@ -105,28 +53,73 @@
                 <div class="tab-class text-center">
                     <div class="row g-4">
                         <div class="col-lg-4 text-start">
-                            <h1>Các Sách Gần Đây</h1>
+                            <h1>Sách theo thể loại</h1>
                         </div>
                         <div class="col-lg-8 text-end">
                             <ul class="nav nav-pills d-inline-flex text-center mb-5">
                                 <li class="nav-item">
                                     <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="">
-                                        <span class="text-dark" style="width: 130px;">Tất cả</span>
+                                        <span id="datachanger" data-filter="all" class="text-dark" style="width: 130px;">Tất cả</span>
                                     </a>
                                 </li>
                                 <?php
                                     foreach ($edata as $tabs){
                                 ?>
-                                <li class="nav-item" data-filter="<?=$tabs['id_danh_muc']?>">
+                                <li class="nav-item" >
                                     <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="">
-                                        <span  class="text-dark" style="width: 130px;"><?=$tabs['ten_danh_muc']?></span>
+                                        <?//phần này thêm cái getspbydm vào để hiện sp với dạng thẻ như cái phía dưới?>
+                                        <span id="datachanger" data-filter="<?=$tabs['id_danh_muc']?>" class="text-dark" style="width: 130px;"><?=$tabs['ten_danh_muc']?></span>
                                     </a>
                                 </li>
                                 <?php }?>
                             </ul>
                         </div>
                     </div>
+                        <script>
+                           // document.addEventListener('DOMContentLoaded',)
+                           function checkAT(tagID,ATTname){
+                                let elem =document.getElementById(tagID);
+                            
+                            if(elem){
+                                let ATTVal = elem.getAttribute(ATTname)
+                                switch(ATTVal){
 
+                                    //các case này để toggle css display none các sản phẩm dựa theo danh mục
+                                    case "all":
+
+                                        break;
+                                    case "1":
+
+                                        break;
+                                    case "5":
+
+                                        break;
+                                    case "11":
+
+                                        break;
+                                    case "13":
+
+                                        break;
+                                    case "14":
+
+                                        break;
+                                    case "15":
+
+                                        break;
+                                    case "16":
+
+                                        break;
+                                    case "17":
+
+                                        break;
+                                    case "20":
+
+                                        break;
+                                }
+                            }
+                        }
+                        checkAT("datachanger","data-")
+                        </script>
                     
                   
 
@@ -150,7 +143,7 @@
                             <p>Tác Giả: <?=$k['tac_gia']?></p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
                                 <p class="text-dark fs-5 fw-bold mb-0"><?=$formatted = number_format($k['gia'],0,',','.')?> VND</p>
-                                <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                <a href="index.php?act=addToCart&id=<?=$k['id_sp']?>" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                             </div>
                         </div>
                     </div>
@@ -218,7 +211,7 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                     <h4 class="mb-3"><?=number_format($k['gia'],0,',','.')?>VND</h4>
-                                    <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                    <a href="index.php?act=addToCart&id=<?=$k['id_sp']?>" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                                 </div>
                             </div>
                         </div>
@@ -231,44 +224,59 @@
         <!-- Bestsaler Product End -->
 
 
-        <!-- Fact Start -->
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="bg-light p-5 rounded">
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-md-6 col-lg-6 col-xl-3">
-                            <div class="counter bg-white rounded p-5">
-                                <i class="fa fa-users text-secondary"></i>
-                                <h4>Người dùng hài lòng</h4>
-                                <h1>2002</h1>
+        <!-- Featurs Section Start -->
+        <div class="container-fluid featurs py-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-car-side fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Giao hàng siêu nhanh</h5>
+                                <p class="mb-0">Hỗ trợ giao hàng toàn quốc 24/7</p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3">
-                            <div class="counter bg-white rounded p-5">
-                                <i class="fa fa-users text-secondary"></i>
-                                <h4>Chất lượng dịch vụ</h4>
-                                <h1>99%</h1>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-user-shield fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Thanh toán bảo mật</h5>
+                                <p class="mb-0">Hỗ trợ nhiều ngân hàng như Momo, Agribank, TPBank,...</p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3">
-                            <div class="counter bg-white rounded p-5">
-                                <i class="fa fa-users text-secondary"></i>
-                                <h4>giấy chứng nhận chất lượng</h4>
-                                <h1>53</h1>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-exchange-alt fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Hoàn trả uy tín</h5>
+                                <p class="mb-0">Tối đa 7 ngày đổi trả, hoàn 100% tiền</p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3">
-                            <div class="counter bg-white rounded p-5">
-                                <i class="fa fa-users text-secondary"></i>
-                                <h4>sản phẩm có sẵn </h4>
-                                <h1>1001</h1>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fa fa-phone-alt fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Hỗ trợ 24/7</h5>
+                                <p class="mb-0">Luôn sẵn lòng giải đáp thắc mắc của bạn</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Fact Start -->
+        <!-- Featurs Section End -->
+
 
 
         <!-- Tastimonial Start -->
