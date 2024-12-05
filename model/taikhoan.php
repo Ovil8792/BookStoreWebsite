@@ -13,4 +13,8 @@ function updateUser($id,$hoten,$files,$email,$diachi,$sodt){
     }
     return pdo_execute($sql);
 }
+function register($usn,$pwd,$role){
+    $sql="INSERT INTO tai_khoan(username_cli,password_cli,role) VALUES ('$usn','$pwd','$role')";
+    return pdo_execute($sql);
+}
 

@@ -1,4 +1,5 @@
 <?php
+include_once $_SERVER['DOCUMENT_ROOT']."/model/checkout.php";
 function updGH()
 {
     if (isset($_GET['id']) && isset($_GET['qty'])) {

@@ -60,13 +60,13 @@
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
                 <a href="index.php" class="navbar-brand">
                     <!-- <h1 class="text-primary display-6">Fruitables</h1> -->
-                    <img width="17%" src="./assets/img/lg.png" alt="logo">
+                    <img width="80%" src="./assets/img/lg.png" alt="logo">
                 </a>
                 <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars text-primary"></span>
                 </button>
-                <div class="collapse navbar-collapse bg-white" style="margin-left:-70px;" id="navbarCollapse">
+                <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
                         <a href="index.php" class="nav-item nav-link active">Trang chủ</a>
                         <a href="index.php?act=shop" class="nav-item nav-link">Cửa hàng</a>

@@ -62,6 +62,12 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
         case "SPbyDM":
             SPByDM();
             break;
+        case "toAD":
+            
+            break;
+        case "":
+            addCheckOut();
+            break;
     }
 }else{
 include_once $_SERVER['DOCUMENT_ROOT']."/view/home/home.php";
