@@ -4,6 +4,10 @@ function checkDN($username, $password){
     $sql = "SELECT * FROM tai_khoan WHERE username_cli='$username' AND password_cli='$password'";
     return pdo_query_one($sql);
 }
+function CDN($username){
+    $sql = "SELECT * FROM tai_khoan WHERE username_cli='$username'";
+    return pdo_query_one($sql);
+}
 function updateUser($id,$hoten,$files,$email,$diachi,$sodt){
     
     if($files == ''){

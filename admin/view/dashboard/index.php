@@ -18,7 +18,7 @@
                                     </div>
                                     <div class="col-md-8">
                                         <?php
-
+                                            //var_export($_SESSION['admin']);
                                         ?>
                                         <h6 class="text-muted font-semibold">Doanh thu ngày</h6>
                                         <h6 class="font-extrabold mb-0"><?=$dayRev?> VND</h6>
@@ -96,13 +96,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php foreach($listCMT as $cmt){ ?>
+                                        <?php
+                                        foreach($listCMT as $cmt){ ?>
 
                                             <tr>
                                                 <td class="col-3">
                                                     <div class="d-flex align-items-center">
                                                         <div class="avatar avatar-md">
-                                                            <img src="/admin/uploads/<?=$avt?>">
+                                                            <img src="/admin/uploads/Users/<?=$avt?>">
                                                         </div>
                                                         
                                                     </div>
@@ -128,7 +129,7 @@
                     <div class="card-body py-4 px-5">
                         <div class="d-flex align-items-center">
                             <div class="avatar avatar-xl">
-                                <img src="/admin/uploads/<?=$_SESSION['admin']['avatar']?>" alt="Face 1">
+                                <img src="/admin/uploads/Users/<?=$_SESSION['admin']['avatar']?>" alt="Face 1">
                             </div>
                             <div style="width:5%"></div>
                             <div class="name">

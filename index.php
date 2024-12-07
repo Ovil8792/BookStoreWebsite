@@ -13,7 +13,7 @@ if(isset($_SESSION['user'])){
 
 include_once $_SERVER['DOCUMENT_ROOT']."/model/binhluan.php";
 include_once $_SERVER['DOCUMENT_ROOT']."/controller/tk/ex.php";
-
+include_once $_SERVER['DOCUMENT_ROOT']."/controller/contact/contact.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/controller/cart/update.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/controller/sanpham/SanPham.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/controller/tk/UserInfo.php";
@@ -24,6 +24,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."\controller\category\index.php";
 require_once "./view/layout/header.php";
  echo "<p style='margin-top:200px;'></p>";
 // var_export($dataUser);
+
 
 
 
@@ -63,9 +64,16 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
             SPByDM();
             break;
         case "toAD":
-            
+            gotoAD();
             break;
-        case "":
+        case "contact":
+            // include_once $_SERVER['DOCUMENT_ROOT']."/controller/contact/contact.php";
+            showCt();
+            break;
+        case "sendContact":
+            sendCt();
+            break;
+        case "addCO":
             addCheckOut();
             break;
     }

@@ -5,9 +5,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(isset($_POST['username']) && isset($_POST['password'])){
         $usn = $_POST['username'];
         $pwd = $_POST['password'];
-        $result = checkDN($usn,$pwd);
-        if($result){
-        $_SESSION['user']=[$usn,$pwd];
+        $result = CDN($usn);
+       // var_export($result['password_cli']);
+       $hpw = $result['password_cli'];
+        if(isset($result) && (password_verify($pwd,$hpw)) ){
+        $_SESSION['user']=[$usn,$hpw];
         
 
         header('Location:index.php');

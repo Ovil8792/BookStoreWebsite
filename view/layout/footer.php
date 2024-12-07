@@ -62,7 +62,7 @@
                             <p>Email: tamuoon@gmail.com</p>
                             <p>Phone: 0904043528</p>
                             <p>Các phương thức thanh toán</p>
-                            <img src="assets/img/payment.png" class="img-fluid" alt="">
+                            <img src="/assets/img/payment.png" class="img-fluid" alt="">
                         </div>
                     </div>
                 </div>

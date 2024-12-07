@@ -1,55 +1,5 @@
-<?php
-    $dburl = "mysql:host=localhost;dbname=webbansach;charset=utf8";
-    $username = 'root';
-    $password = '';
-try{
-    $conn = new PDO($dburl, $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Kết nối thất bại: " . $e->getMessage();
-    exit;
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Lấy dữ liệu từ form đăng nhập
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    try {
-        // Sử dụng Prepared Statements để tránh SQL Injection
-        $sql = "SELECT * FROM tai_khoan WHERE username_cli = :username AND password_cli = :password";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':password', $password);
-        $stmt->execute();
-
-        // Kiểm tra kết quả
-        if ($stmt->rowCount() > 0) {
-            // Đăng nhập thành công
-            session_start();
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            if($user['role'] == 'admin' || $user['role'] == 'coAD') {
-            $_SESSION['admin']=$user ;
-            echo "Đăng nhập thành công";
-            // var_export($_SESSION['admin']);
-            header("Location:index.php");
-            }else{
-                session_abort();
-                session_unset();
-
-                echo "Bạn ko phải admin, vui lòng về lại trang client";
-            }
-        } else {
-            // Sai thông tin đăng nhập
-            echo "Tên đăng nhập hoặc mật khẩu không đúng.";
-        }
-    } catch (PDOException $e) {
-        echo "Lỗi: " . $e->getMessage();
-    }
-}
 
 
-?>
 
 
 <!DOCTYPE html>
@@ -66,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="row ct">
         <div class="col-12">
-                <form action="dangnhap.php" method="POST">
+                <form action="auth.php" method="POST">
         <div class="mb-3">
             <label for="username" id="cen" class="form-label">Tên Đăng Nhập</label>
             <input type="text" name="username" class="form-control" id="username">

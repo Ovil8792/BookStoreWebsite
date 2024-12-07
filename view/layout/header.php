@@ -87,7 +87,7 @@
                             </div>
 
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Hỗ trợ</a>
+                        <a href="index.php?act=contact" class="nav-item nav-link">Hỗ trợ</a>
                     </div>
                     <div class="d-flex m-3 me-0">
                         <button
