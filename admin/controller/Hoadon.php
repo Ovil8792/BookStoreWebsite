@@ -12,6 +12,8 @@ if (isset($_GET['id'])) {
         $hoaDonInfo[$key]['ten_sp'] = $sanPhamInfo['ten_sp'];
         $hoaDonInfo[$key]['anh_sp'] = $sanPhamInfo['anh_sp'];
     }
+    
+    // var_export($hoaDonChiTiet);
     //kéo sang view sp,cthd ở admin
     include_once $_SERVER['DOCUMENT_ROOT']."/admin/view/chitiethoadon/index.php";
 }
@@ -31,4 +33,15 @@ if (isset($_GET['id'])) {
             $hoadon = getHoaDonById($id_nguoidung);
         }
         
+    }
+    function changeStatHD(){
+        // echo $_POST['stat'];
+        if(isset($_POST['stat'])){
+            $stat = $_POST['stat'];
+            $id=$_GET['id'];
+            changeStat($id,$stat);
+            echo "<script>alert('sửa thành công!')
+            window.location='index.php?act=chitiethoadon&id=$id'
+            </script>";
+        }
     }

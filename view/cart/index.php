@@ -1,12 +1,12 @@
 
 
         <!-- Single Page Header start -->
-        <div class="container-fluid page-header py-5">
-            <h1 class="text-center text-white display-6">Cart</h1>
+        <div class="container-fluid page-header py-5" style="background: url(../assets/img/img.webp) !important;">
+            <h1 class="text-center" style="font-size:4rem;color:black;">Giỏ hàng</h1>
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active text-white">Cart</li>
+                <li class="breadcrumb-ite me-2 mt-1 fs-5 fw-boldm"><a href="index.php">Trang chủ</a></li>
+                <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> --><span class="text-white fs-3 ">/ </span>
+                <li class="breadcrumb-item active ms-2 mt-1 fs-5 fw-bold" style="color:black!important;"> Giỏ hàng</li>
             </ol>
         </div>
         <!-- Single Page Header End -->
@@ -28,9 +28,12 @@
                         </thead>
                         <tbody>
                             <?php
-                                foreach($listGH as $item){
+                            // var_export($_SESSION['gioHang']);
+                            // var_export($listGH[0]);
+                                foreach($listGH as $key=> $item){
                             ?>
-                            <tr data-id="<?=$item['id']?>">
+
+                            <tr class="cart-row" data-id="<?=$item['id']?>">
                                 <th scope="row">
                                     <div class="d-flex align-items-center">
                                         <img src="/admin/uploads/<?=$item['anh_sp']?>" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
@@ -61,9 +64,9 @@
                                     <p id="tot" data-total="<?=$item['gia']*$item['soLuong']?>" class="mb-0 mt-4"><?=number_format($item['gia'] * $item['soLuong'])?> VND</p>
                                 </td>
                                 <td>
-                                    <button class="btn btn-md rounded-circle bg-light border mt-4" >
+                                    <a href="index.php?act=delGH&id=<?=$key?>" class="btn btn-md rounded-circle bg-light border mt-4" >
                                         <i class="fa fa-times text-danger"></i>
-                                    </button>
+                                </a>
                                 </td>
                             
                             </tr>
@@ -74,14 +77,16 @@
                 </div>
                                     <?php //var_export($listGH) ?>
                 <div class="row g-4 justify-content-end">
-                    <div class="col-8"></div>
+                    <div class="col-8">
+                        <a href="index.php?act=shop" class="btn btn-primary rounded-pill px-4 py-3 text-uppercase mb-4">Tiếp tục mua hàng</a>
+                    </div>
                     <div class="col-sm-8 col-md-7 col-lg-6 col-xl-4">
                         <div class="bg-light rounded">
                             <div class="p-4">
                                 <h1 class="display-6 mb-4">Thanh toán</h1>
                                 <div class="d-flex justify-content-between mb-4">
                                     <h5 class="mb-0 me-4">Tổng giá:</h5>
-                                    <p id="cart-subtt" class="mb-0">0</p>
+                                    <p id="cart-subtt" class="mb-0"></p>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <h5 class="mb-0 me-4"></h5>
@@ -93,9 +98,9 @@
                             </div>
                             <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
                                 <h5 class="mb-0 ps-4 me-4">Tổng:</h5>
-                                <span id="cart-total" class="mb-0 pe-4">0</span>
+                                <span id="cart-total" class="mb-0 pe-4"></span>
                             </div>
-                            <a href="index.php?act=checkout" class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4">Thanh toán</a>
+                            <a href="index.php?act=checkout" id="checkout-button" class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4">Thanh toán</a>
                         </div>
                     </div>
                 </div>
@@ -103,53 +108,99 @@
         </div>
         <!-- Cart Page End -->
 <script>
-    document.addEventListener("DOMContentLoaded", function  (){
-        let qtyInp =document.querySelectorAll('.quantity-input')
 
-        qtyInp.forEach(inp => {
-            inp.addEventListener('input', function  () {
-                let qty =parseInt((inp.value))
-                let row = inp.closest('tr')
-                let price =parseFloat(row.querySelector('#pr').getAttribute('data-price'))
-                let total = row.querySelector('#tot');
-                let newTT =price *qty
-                total.textContent = newTT.toString()+' VND';
-                total.setAttribute('data-total',newTT)
+//     document.addEventListener("DOMContentLoaded", ()=>{
+//         let qtyInputs =document.querySelectorAll('.quantity-input')
+//         let stt =  document.querySelector('#cart-subtt')
+//     let ctt = document.querySelector('#cart-total')
+// // let TTItem =document.querySelectorAll('#tot')
 
-                updateTotal()
+// let updateRowTT = (row,qty)=>{
+//     let price =parseInt(row.querySelector('#pr').getAttribute('data-price'));
+//     let total = row.querySelector('#tot')
+//     let newTota = price*qty
+//     total.textContent = newTota.toString();
+//     total.setAttribute('data-total',newTota)
+// }
+// let updateCTT = ()=>{
+//     let subtt = 0
+//     document.querySelectorAll('#tot').forEach(item=>{
+//         subtt += parseInt(item.getAttribute('data-total'))
+//     })
+//     let tota = subtt+ 20000;
 
-                let itemID = row.getAttribute('data-id')
-                updItem(itemID,qty)
+//     stt.textContent = subtt.toString()+" VND";
+//     ctt.textContent = tota.toString()+" VND";
+// }
+// qtyInputs.forEach(input=>{
+//     input.addEventListener('input',(event)=>{
+//         let inpEl = event.target
+//         let rows = inpEl.closest('tr')
+//         if(rows){
+//             let qty = parseInt(inpEl.value)
+//             if(qty>0){
+//             updateRowTT(rows,qty)
+//             updateCTT()
+//             }
+//         }
+//     })
+// })
+// updateCTT();
+// })
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Lấy nút "Thanh toán"
+    const checkoutButton = document.querySelector("#checkout-button"); // Thay bằng id thực tế
+    checkoutButton.addEventListener("click", (event) => {
+        event.preventDefault(); // Ngăn chuyển trang mặc định
+
+        // Thu thập dữ liệu giỏ hàng
+        const cartItems = [];
+        document.querySelectorAll("tr.cart-row").forEach((row) => {
+            const productId = row.getAttribute("data-id");
+            const quantity = row.querySelector(".quantity-input").value;
+            const price = row.querySelector("#pr").getAttribute("data-price");
+            const total = row.querySelector("#tot").getAttribute("data-total");
+
+            cartItems.push({
+                id: productId,
+                quantity: parseInt(quantity),
+                price: parseInt(price),
+                total: parseInt(total),
             });
-    })
-let TTItem =document.querySelectorAll('#tot')
-        console.log(TTItem);
-    let updateTotal = () => {
-        let subtt =0
+        });
 
-
-        TTItem.forEach(item=>{
-            subtt += parseFloat(item.getAttribute('data-total'))
+        // Gửi AJAX request
+        fetch("/controller/checkout-handler.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                cart: cartItems,
+            }),
         })
-        let shipFee = 20000;
-        //update this fee later
-
-        let total =subtt + shipFee
-        document.getElementById("cart-subtt").textContent = subtt.toString()+' VND';
-        document.getElementById("cart-total").textContent = total.toString()+' VND';
-
-    }
-    let updItem = (id,qty)=>{
-        //trong fetch ghi lệnh update lên db qua ctl và model
-        fetch(`?act=updGH&id=${id}&qty=${qty}`,{method:'GET'})
-        .then(response=>response.json())
-        .then(data=>{
-            if(data.success){
-                console.log("cart updated successfully");
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.success) {
+                // Chuyển hướng tới trang thanh toán
+                window.location.href = "";
+            } else {
+                alert("Thanh toán thất bại! Vui lòng thử lại.");
             }
         })
-        .catch(error=>console.error('Error:',error));
-    }})
+        .catch((error) => console.error("Lỗi khi gửi dữ liệu:", error));
+    });
+});
+
+
+
 </script>
 
        

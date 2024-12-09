@@ -43,7 +43,7 @@
                         foreach ($listhd as $value) {
                         ?>
                             <tr>
-                                <td><?= $value['id_hoa_don']+1 ?></td>
+                                <td><?= $value['id_hoa_don'] ?></td>
                                 <td><?= $value['id_nguoidung'] ?></td>
                                 <td><?= $value['phuongthucthanhtoan'] ?></td>
                                 <td><?= $value['tinhtrang'] ?></td>
@@ -54,7 +54,7 @@
                                 <td>
                                     <div class="d-flex">
 
-                                        <a class="btn btn-primary" href="index.php?act=chitiethoadon&id=<?= $value['id_nguoidung'] ?>">Chi tiết</a>
+                                        <a class="btn btn-primary" href="index.php?act=chitiethoadon&id=<?= $value['id_hoa_don'] ?>">Chi tiết</a>
 
                                     </div>
                                 </td>

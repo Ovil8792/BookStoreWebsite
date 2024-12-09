@@ -51,6 +51,9 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
         case "ctnd":
             getTK();
             break;
+        case "delGH":
+            delItemGH();
+            break;
         case "suaTTUser":
             SuaTT();
             break;
@@ -67,7 +70,6 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
             gotoAD();
             break;
         case "contact":
-            // include_once $_SERVER['DOCUMENT_ROOT']."/controller/contact/contact.php";
             showCt();
             break;
         case "sendContact":
@@ -75,6 +77,9 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
             break;
         case "addCO":
             addCheckOut();
+            break;
+        case "binhluan":
+            cmtProduct();
             break;
     }
 }else{

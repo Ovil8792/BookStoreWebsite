@@ -2,10 +2,16 @@
 include_once $_SERVER['DOCUMENT_ROOT']."/model/sanpham.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/model/binhluan.php";
 include_once $_SERVER['DOCUMENT_ROOT']."/model/DanhMuc.php";
+include_once $_SERVER['DOCUMENT_ROOT']."/model/taikhoan.php";
 
 
         $data = DSSP();
         $edata = getDM();
+        foreach ($data as $key => $val){
+            $dmsp = $data[$key]['id_danh_muc'];
+            $tdm=getDMById($dmsp);
+            $data[$key]['ten_danh_muc'] = $tdm[0]['ten_danh_muc'];
+        }
         
      function avatarUpload(){
         $uploaddir='uploads/';
@@ -61,7 +67,38 @@ function showSPById(){
     $edata = getDM();
     $dataBl= getBLbyIdSP($_GET['id']);
     $dt=DSSP();
+    $spDM = getSPByDM( $_GET['id']);
+    foreach($dataBl as $key=>$items){
+        $usfrsp = find_user($dataBl[$key]['id_taikhoan']);
+         $dataBl[$key]['hoten']=$usfrsp['ho_ten'];
+         $dataBl[$key]['avatar']=$usfrsp['avatar'];
+    }
+
     require_once $_SERVER['DOCUMENT_ROOT']."/view/product/index.php";
+}
+function cmtProduct(){
+    if(isset($_POST['comment'])){
+        if(isset($_POST['id_sp'])){
+    $id_sp = $_POST['id_sp'];
+
+//logic lấy id của ng dùng
+    $user= CDN($_SESSION['user']['user']);
+    $idtk = $user['id_user'];
+    //đưa vào session user để cập nhật thông tin comment
+$_SESSION['user']['id'] = $idtk;
+
+    //lấy nội dung comment
+    $comment = $_POST['content'];
+    $dgia = 5;
+    $ngay = date("Y-m-d");
+    commenting($id_sp,$idtk,$comment,$dgia,$ngay);
+    echo "<script>window.location=`index.php?act=ctsp&id={$id_sp}`</script>";
+    // header("location:`index.php?act=ctsp?id=".$id_sp);
+
+    }else{
+        echo "thiếu ID sản phẩm";
+    }
+}
 }
 function checkDMfromSP(){
     $dm = getDM();

@@ -5,7 +5,7 @@
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="#">
-                            <h1 class="text-primary mb-0">BookStore</h1>
+                            <h1 class="text-primary mb-0">SachVN</h1>
                             <p class="text-secondary mb-0">Nơi thỏa mãn tình yêu sách của bạn </p>
                             </a>
                         </div>
@@ -30,29 +30,29 @@
                         <div class="footer-item">
                         <h4 class="text-light mb-3">Tại sao mọi người thích chúng tôi !!</h4>
                             <p class="mb-4">Đa số mọi người thấy chúng tôi là một cửa hàng vô cùng đã dạng với giá thành phải chăng và chế độ hậu thuẫn sau khi mua hàng rất tốt</p>
-                            <a href="" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Xem thêm</a>
+                            <a href="index.php?act=about" class="btn border-secondary py-2 px-4 rounded-pill text-primary">Xem thêm</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
                         <h4 class="text-light mb-3">Thông tin cửa hàng </h4>
-                            <a class="btn-link" href="">về chúng tôi</a>
-                            <a class="btn-link" href="">liên hệ</a>
-                            <a class="btn-link" href="">chính sách bảo mật</a>
-                            <a class="btn-link" href="">điều khoản và điều kiện</a>   
-                            <a class="btn-link" href="">chính sách hoàn trả</a>
-                            <a class="btn-link" href="">câu hỏi thường gặp </a>
+                            <a class="btn-link" href="index.php?act=about">về chúng tôi</a>
+                            <a class="btn-link" href="index.php?act=contact">liên hệ</a>
+                            <a class="btn-link" href="#">chính sách bảo mật</a>
+                            <a class="btn-link" href="#">điều khoản và điều kiện</a>   
+                            <a class="btn-link" href="#">chính sách hoàn trả</a>
+                            <a class="btn-link" href="#">câu hỏi thường gặp </a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
                         <h4 class="text-light mb-3">Tài khoản</h4>
-                            <a class="btn-link" href="">Tài khoản của tôi </a>
-                            <a class="btn-link" href="">Chi tiết cửa hàng</a>
-                            <a class="btn-link" href="">Giỏ hàng</a>
-                            <a class="btn-link" href="">Danh sách yêu thích</a>
-                            <a class="btn-link" href="">Lịch sử đặt hàng</a>
-                            <a class="btn-link" href="">Đơn đặt hàng quốc tế</a>
+                            <a class="btn-link" href="index.php?act=ctnd">Tài khoản của tôi </a>
+                            <a class="btn-link" href="#">Chi tiết cửa hàng</a>
+                            <a class="btn-link" href="index.php?act=cart">Giỏ hàng</a>
+                            <a class="btn-link" href="#">Danh sách yêu thích</a>
+                            <a class="btn-link" href="#">Lịch sử đặt hàng</a>
+                            <a class="btn-link" href="#">Đơn đặt hàng quốc tế</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -81,7 +81,7 @@
                         <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                         <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                         <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                        <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a> -->
                     </div>
                 </div>
             </div>

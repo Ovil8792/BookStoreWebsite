@@ -17,7 +17,7 @@
             <div class="container py-5">
                 <h1 class="mb-4">Chi tiết hóa đơn</h1>
                 <?php //var_export($listgiohang) ?>
-                <form action="#" method="POST">
+                <form action="index.php?act=addCO" method="POST">
                     <div class="row g-5">
                         <div class="col-md-12 col-lg-6 col-xl-7">
                             <div class="row">
@@ -38,7 +38,7 @@
                             </div>
                             <div class="form-item">
                                 <label class="form-label my-3">Địa chỉ email <sup style="color:red;">*</sup></label>
-                                <input type="email" class="form-control">
+                                <input type="email" name="email" id="email" class="form-control">
                             </div>
                             <div class="form-item">
                                 <label class="form-label my-3">Ghi chú</label>
@@ -54,7 +54,7 @@
                                             <th scope="col">Ảnh SP</th>
                                             <th scope="col">Tên SP</th>
                                             <th scope="col">Giá</th>
-                                            <th scope="col">Số lượng</th>
+                                            <th scope="col" class="px-3">Số lượng</th>
                                             <th scope="col">Tổng giá</th>
                                         </tr>
                                     </thead>
@@ -103,14 +103,30 @@
                                         <tr>
                                             <th scope="row">
                                             </th>
-                                            <td class="py-5">
-                                                <p class="mb-0 text-dark text-uppercase py-3">Tổng giá</p>
+                                            <td class="py-2">
+                                                <p class="mb-0 text-dark text-uppercase py-2">Tổng giá</p>
                                             </td>
-                                            <td class="py-5"></td>
-                                            <td class="py-5"></td>
-                                            <td class="py-5">
-                                                <div class="py-3 border-bottom border-top">
+                                            <td class="py-2"></td>
+                                            <td class="py-2"></td>
+                                            <td class="py-2">
+                                                <div class="py-2 border-bottom border-top">
                                                     <p class="mb-0 text-dark"><?=$tongtien?> VND</p>
+                                                </div>
+                                            </td>
+                                            <!-- <td class="py-5"></td> -->
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td class="py-2">
+                                                <p class="mb-0 text-dark text-uppercase py-3">Phương thức thanh toán</p>
+                                            </td>
+                                            <td class="py-2"></td>
+                                            <td class="py-2"></td>
+                                            <td class="py-2 px-2">
+                                                <div class="py-2">
+                                                    <input type="radio" id="bank" value="bank" name="payment"><span>Chuyển khoản</span><br>
+                                                    <input type="radio" id="cash" value="cash" name="payment"><span>Tiền mặt</span>
                                                 </div>
                                             </td>
                                         </tr>
@@ -118,7 +134,7 @@
                                 </table>
                             </div>
                             <div class="row g-4 text-center align-items-center justify-content-center pt-4">
-                                <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Đặt hàng</button>
+                                <button type="submit" id="thanhtoan" name="thanhtoan" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Đặt hàng</button>
                             </div>
                         </div>
                     </div>

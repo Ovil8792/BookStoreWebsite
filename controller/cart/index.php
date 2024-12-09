@@ -10,6 +10,7 @@ foreach($listGH as $key =>$i){
     $listGH[$key]['anh_sp'] = $SPinfo['anh_sp'];
     $tong+=$SPinfo['gia'] *$i['soLuong'];
 }
+
 }else{
     echo "<script>alert('Giỏ hàng đang trống'); window.location = 'index.php';</script>";
 }

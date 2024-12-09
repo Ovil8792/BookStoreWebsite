@@ -12,10 +12,13 @@ include_once "pdo.php";
     }
 
     function AllCTHD($id){
-        $sql="SELECT * FROM chitiethoadon WHERE id='$id'";
+        $sql="SELECT * FROM chitiethoadon WHERE id_hoadon='$id'";
         return pdo_query($sql);
     }
-
+function changeStat($id,$stat){
+    $sql = "UPDATE hoadon SET tinhtrang = '$stat' WHERE id_hoa_don = $id";
+    return pdo_execute($sql);
+}
 
 
 

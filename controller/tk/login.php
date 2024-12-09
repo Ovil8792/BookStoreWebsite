@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
        // var_export($result['password_cli']);
        $hpw = $result['password_cli'];
         if(isset($result) && (password_verify($pwd,$hpw)) ){
-        $_SESSION['user']=[$usn,$hpw];
+        $_SESSION['user']=["id"=>$result['id_user'],"user"=>$usn,"pwd"=>$hpw];
         
 
         header('Location:index.php');

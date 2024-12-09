@@ -51,7 +51,7 @@
         <div class="container-fluid fruite py-5">
             <div class="container py-5">
                 <div class="tab-class text-center">
-                    <div class="row g-4">
+                    <!-- <div class="row g-4">
                         <div class="col-lg-4 text-start">
                             <h1>Sách theo thể loại</h1>
                         </div>
@@ -74,52 +74,10 @@
                                 <?php }?>
                             </ul>
                         </div>
-                    </div>
-                        <script>
-                           // document.addEventListener('DOMContentLoaded',)
-                           function checkAT(tagID,ATTname){
-                                let elem =document.getElementById(tagID);
-                            
-                            if(elem){
-                                let ATTVal = elem.getAttribute(ATTname)
-                                switch(ATTVal){
-
-                                    //các case này để toggle css display none các sản phẩm dựa theo danh mục
-                                    case "all":
-
-                                        break;
-                                    case "1":
-
-                                        break;
-                                    case "5":
-
-                                        break;
-                                    case "11":
-
-                                        break;
-                                    case "13":
-
-                                        break;
-                                    case "14":
-
-                                        break;
-                                    case "15":
-
-                                        break;
-                                    case "16":
-
-                                        break;
-                                    case "17":
-
-                                        break;
-                                    case "20":
-
-                                        break;
-                                }
-                            }
-                        }
-                        checkAT("datachanger","data-")
-                        </script>
+                    </div> -->
+                        <!-- <script>
+                 
+                        </script> -->
                     
                   
 
@@ -130,19 +88,20 @@
                     
                 <div class="owl-carousel vegetable-carousel justify-content-center">
                 <?php
-                    //print_r($data);
+                    // var_export($tdm);
+                    // echo $data[1]['id_danh_muc'];
                      foreach($data as $k){ 
                         ?>
                     <div class="border border-primary rounded position-relative vesitable-item">
                         <div class="vesitable-img">
-                            <img src="img/vegetable-item-6.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="" class="img-fluid w-100 rounded-top" alt="">
                         </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4><?=$k['ten_sp']?></h4>
+                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;"><?php echo $k['ten_danh_muc'];  ?></div>
+                        <div class="p-4 rounded-bottom " >
+                            <h4 class="mt-3 mx-3" style="width: 200px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><?=$k['ten_sp']?></h4>
                             <p>Tác Giả: <?=$k['tac_gia']?></p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0"><?=$formatted = number_format($k['gia'],0,',','.')?> VND</p>
+                                <p class="text-dark d-flex justify-content-center align-items-center text-center fs-6 fw-bold mb-0"><?=$formatted = number_format($k['gia'],0,',','.')?> VND</p>
                                 <a href="index.php?act=addToCart&id=<?=$k['id_sp']?>" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                             </div>
                         </div>

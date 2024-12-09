@@ -13,7 +13,7 @@ function listHoDo(){
         $totalRev=0;
 
         foreach($listHD as $hd){
-            $createAt= substr($hd['create_at'],0,10);
+            $createAt= $hd['create_at'];
             if($hd['tinhtrang']=="Đã hoàn thành"&& $createAt == $curDate){
                 $totalRev+=$hd['total'];
             }

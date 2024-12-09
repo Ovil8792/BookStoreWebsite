@@ -61,6 +61,7 @@
                 <a href="index.php" class="navbar-brand">
                     <!-- <h1 class="text-primary display-6">Fruitables</h1> -->
                     <img width="80%" src="./assets/img/lg.png" alt="logo">
+                    
                 </a>
                 <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -68,6 +69,7 @@
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
+                    <?php //var_export($_SESSION['user']) ?>
                         <a href="index.php" class="nav-item nav-link active">Trang chủ</a>
                         <a href="index.php?act=shop" class="nav-item nav-link">Cửa hàng</a>
                         <a href="index.php?act=about" class="nav-item nav-link">Về chúng tôi </a>
@@ -89,7 +91,7 @@
                         </div>
                         <a href="index.php?act=contact" class="nav-item nav-link">Hỗ trợ</a>
                     </div>
-                    <div class="d-flex m-3 me-0">
+                    <div class="d-flex justify-content-center align-items-center me-0" >
                         <button
                             class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4"
                             data-bs-toggle="modal" data-bs-target="#searchModal"><i
@@ -98,7 +100,16 @@
                             <i class="fa fa-shopping-bag fa-2x"></i>
                             <span
                                 class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
-                                style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
+                                style="top: -5px; left: 15px; height: 20px; min-width: 20px;">
+                                <?php 
+                                // $_SESSION['gioHang'] == '' && $_SESSION['gioHang'] != null? '0':count($_SESSION['gioHang'])
+                                if(!isset($_SESSION['gioHang'])){
+                                    echo 0;
+                                }else{
+                                     echo count($_SESSION['gioHang']);
+                                }
+                                ?>
+                                </span>
                         </a>
                         <div class="dropdown">
                             <a href="#" class="my-auto fas fa-user fa-2x" role="button"

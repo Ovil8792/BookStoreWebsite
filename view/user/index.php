@@ -1,7 +1,8 @@
+<div class="mt-5"></div>
 <div class="row" style="margin:auto;height:850px;width:80%;">
 
 <?php 
-// var_export($dataUser);
+//  var_export($dataUser);
 //  var_export($data);
 ?>
 <h5 class="card-title">Thông tin người dùng</h5>
@@ -9,7 +10,7 @@
     <form action="index.php?act=suaTTUser" method="POST" class="card h-100" enctype="multipart/form-data">
         <div class="d-flex justify-content-center py-2">
             <?php if($dataUser['avatar']=="" ){ ?>
-                        <img class=" rounded-circle py-1 px-1 my-5 mx-4" width="200px" src="../admin/uploads/default.svg" alt="Avatar" style="max-height:200px;margin-right:300px;border:3px solid lightgray;background:#2cff78;" > 
+                        <img class=" rounded-circle py-1 px-1 my-5 mx-4" width="150px" src="../admin/uploads/default.svg" alt="Avatar" style="border:3px solid lightgray;background:#2cff78;" > 
                     <?php }else{ ?>
                         <img class=" rounded-circle py-1 px-1 my-5 mx-4" width="200px" src="../admin/uploads/Users/<?=$dataUser['avatar']?>" alt="Avatar" style="max-height:200px;margin-right:300px;border:3px solid lightgray;" > 
                         <?php } ?>

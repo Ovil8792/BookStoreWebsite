@@ -78,7 +78,7 @@
                                         <img width="70%" src="/admin/uploads/<?=$k['anh_sp']?>" class="img-fluid" alt="">
                                     </div>
                                     <div>
-                                        <h6 class="mb-2"><?=$k['ten_sp']?></h6>
+                                        <h6 class="mb-2" style="width: 200px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><?=$k['ten_sp']?></h6>
                                         <div class="d-flex mb-2">
                                             <i class="fa fa-star text-secondary"></i>
                                             <i class="fa fa-star text-secondary"></i>
@@ -94,30 +94,37 @@
                                 </div>
                                <?php } ?>
                                 <div class="d-flex justify-content-center my-4">
-                                    <a href="#" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">Vew More</a>
+                                    <!-- <a href="#" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">Vew More</a> -->
                                 </div>
                             </div>
                             <div class="col-lg-12">
-                                <div class="position-relative">
+                                <!-- <div class="position-relative">
                                     <img src="img/banner-fruits.jpg" class="img-fluid w-100 rounded" alt="">
                                     <div class="position-absolute" style="top: 50%; right: 10px; transform: translateY(-50%);">
                                         <h3 class="text-secondary fw-bold">Fresh <br> Fruits <br> Banner</h3>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
+                    <style>
+                        sa{
+                            
+                        }
+                    </style>
                     <div class="col-lg-9">
                         <div class="row g-4 justify-content-center">
-                            <?php foreach ($data as $v) { ?>
+                            <?php
+                            // var_export($data);
+                            foreach ($data as $v) { ?>
                                 <div class="col-md-6 col-lg-6 col-xl-4">
                                     <div class="rounded position-relative fruite-item">
                                         <div style="height: 450px;" class="fruite-img">
                                             <img src="/admin/uploads/<?=$v['anh_sp'] ?>" width="100%" height="100%" style="align-items: center;display: flex;justify-content:center" class="" alt="">
                                         </div>
-                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                            <h4><a href="index.php?act=ctsp&id=<?=$v['id_sp']?>"><?=$v['ten_sp']?></a></h4>
+                                        <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;"><?=$v['ten_danh_muc']?></div>
+                                        <div class="p-4 border border-secondary border-top-0 rounded-bottom" >
+                                            <h4 style=" width: 250px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><a href="index.php?act=ctsp&id=<?=$v['id_sp']?>"><?=$v['ten_sp']?></a></h4>
                                             <div class="d-flex justify-content-between flex-lg-wrap">
                                                 <p class="text-dark fs-5 fw-bold mb-0"><?=number_format($v['gia'],0,",",".")?> VND</p>
                                                 <a href="index.php?act=addToCart&id=<?=$v['id_sp']?>" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Thêm vào giỏ hàng</a>

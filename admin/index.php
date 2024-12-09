@@ -6,11 +6,11 @@ if(!isset($_SESSION['admin'])){
 }else{
     
 
-
+// var_export($_SESSION['admin']);
 
 include_once "./view/layouts/header.php";
  include_once "./controller/DanhMuc.php";
-// include_once "./controller/DashBoard.php";
+include_once "./model/user.php";
  include_once "./controller/SanPham.php";
 include_once $_SERVER['DOCUMENT_ROOT']."/admin/controller/Binhluan.php";
 include_once $_SERVER['DOCUMENT_ROOT']."/admin/controller/Hoadon.php";
@@ -19,7 +19,10 @@ include_once "./controller/User.php";
 
 include_once "./controller/Hoadon.php";
 
-
+$AdminData =getUser($_SESSION['admin']['username_cli']);
+// var_export($AdminData);
+$_SESSION['admin']['avatar']=$AdminData['avatar'];
+$_SESSION['admin']['ho_ten']=$AdminData['ho_ten'];
 
 if (isset($_GET['act']) && $_GET['act'] != '') {
     $action = $_GET['act'];
@@ -80,6 +83,9 @@ if (isset($_GET['act']) && $_GET['act'] != '') {
             break;
         case "hide":
             anDaMu();
+            break;
+        case "suattHD":
+            changeStatHD();
             break;
     }
 }

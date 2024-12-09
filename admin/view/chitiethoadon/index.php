@@ -21,10 +21,12 @@
         <div class="card">
             <div class="card-header">
                 Chi Tiết Hóa Đơn
-                <?php //var_export($hoaDonChiTiet);  ?>
+                <?php
+                //  var_export($hoaDonChiTiet);
+                  ?>
             </div>
             <div class="card-body">
-                <form action="" method="POST">
+                <form action="index.php?act=suattHD&id=<?=$hoaDonChiTiet['id_hoa_don']?>" method="POST">
                    <div class="mb-3">
                    <label class="form-label" for="name">Tên người nhận</label>
                    <input type="text" disabled value="<?=$hoaDonChiTiet['ho_ten']?>" class="form-control" id="name" name="name">
@@ -44,12 +46,15 @@
                    <div class="mb-3">
                    <label class="form-label" for="stat" >Trạng thái</label>
                    <select name="stat" id="stat" class="form-select">
-                    <option <?=$hoaDonChiTiet['tinhtrang']=="Đã thanh toán"?"selected" : ""?> value="Đã thanh toán">Đã thanh toán</option>
-                    <option <?=$hoaDonChiTiet['tinhtrang']=="Chưa thanh toán"?"selected" : ""?> value="Chưa thanh toán">Chưa thanh toán</option>
+                    <option <?=$hoaDonChiTiet['tinhtrang']=="Đã hoàn thành"?"selected" : ""?> value="Đã hoàn thành">Đã hoàn thành</option>
+                    <option <?=$hoaDonChiTiet['tinhtrang']=="Chưa hoàn thành"?"selected" : ""?> value="Chưa hoàn thành">Chưa hoàn thành</option>
                     <option <?=$hoaDonChiTiet['tinhtrang']=="Đã hủy"?"selected" : ""?> value="Đã hủy">Đã hủy</option>
                    </select>
                    </div>
                    <div class="col-12 col-md-6 order-md-1 order-last">
+                    <?php
+                    
+                    ?>
                             <h3>Sản phẩm</h3>
                         </div>
                         <table class="table">
@@ -64,7 +69,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach($hoaDonInfo as $key){ ?>
+                                <?php
+                                // var_export($hoaDonInfo);
+                                foreach($hoaDonInfo as $key){ ?>
                                 <tr>
                                     <td><?=$key['id_sp']?></td>
                                     <td><?=$key['ten_sp']?></td>

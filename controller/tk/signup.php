@@ -7,7 +7,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 $Ipwd = $_POST['password'];
 $pwd = password_hash($Ipwd,PASSWORD_DEFAULT);
 register($usn,$pwd,'user');
-$_SESSION['user']=[$usn,$pwd];
+$_SESSION['user']=["user"=>$usn,"pwd"=>$pwd];
 echo "
 <script>
 alert('Đăng ký thành công!')

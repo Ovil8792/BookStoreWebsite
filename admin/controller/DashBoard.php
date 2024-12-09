@@ -2,6 +2,7 @@
 include_once $_SERVER['DOCUMENT_ROOT']."/admin/model/dashboard.php";
 function dashboardShow() {
 $listhd = listHoDo();
+
 $listCMT= CMT();
 $listUser = ShowUsers();
 $monthRev = MonthRev($listhd);

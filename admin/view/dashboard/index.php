@@ -18,7 +18,8 @@
                                     </div>
                                     <div class="col-md-8">
                                         <?php
-                                            //var_export($_SESSION['admin']);
+                                            // var_export($listhd);
+                                            // echo date("Y-m-d")
                                         ?>
                                         <h6 class="text-muted font-semibold">Doanh thu ngày</h6>
                                         <h6 class="font-extrabold mb-0"><?=$dayRev?> VND</h6>
@@ -65,7 +66,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Profile Visit</h4>
+                                <h4>Biểu đồ doanh thu</h4>
                             </div>
                             <div class="card-body">
                                 <div id="chart-profile-visit"></div>
